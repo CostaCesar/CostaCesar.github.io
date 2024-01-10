@@ -18,9 +18,16 @@ class Carousel
         this.slidesContainer = carousel.querySelector('[data-carousel-slides]');
 
         // state
-        this.currentSlide = this.startSlide = 0;
-        this.aboutSlide = 2;
-        this.workSlide = 3;
+        for(let i = 0; i < this.slidesContainer.children.length; i++)
+        {
+            let element = this.slidesContainer.children[i];
+            if(element.dataset.carouselIndex == "start")
+                this.currentSlide = this.startSlide = i;
+            else if(element.dataset.carouselIndex == "about")
+                this.aboutSlide = i;
+            else if(element.dataset.carouselIndex == "work")
+                this.workSlide = i;
+        }
         this.numSlides = this.slidesContainer.children.length;
 
         // add events
