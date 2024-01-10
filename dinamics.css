@@ -1,0 +1,156 @@
+.chevron{
+    width: 100%;
+    height: 100%;
+}
+.carousel{
+    --curent-slide: 0;
+    position: relative;
+    overflow: hidden;
+    height: 700px;
+    z-index: 1;
+    background-color: var(--color_backg4);
+}
+.carousel-button .chevron
+{
+    animation-name: blink;
+    animation-duration: 3000ms;
+    animation-iteration-count: infinite;
+}
+.carousel-button{
+    /* vertically centering the buttons */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+
+    /* basic styling */
+    width: 40px;
+    padding: 0;
+    margin: 0.5rem;
+    border-radius: 50%;
+    background-color: transparent;
+    border: none;
+
+    font-size: 1.5rem;
+    cursor: pointer;
+
+    filter: invert(1);
+    transition: filter 0.5s;
+}
+@keyframes blink
+{
+    0% {filter: invert(1) brightness(90%);}
+    50% {filter: invert(1) brightness(10%);}
+    100% {filter: invert(1) brightness(90%);}
+}
+
+.carousel-button:hover
+{
+    filter: invert(1) drop-shadow(0px 0px 8px rgba(255,255,255,255));
+}
+.carousel-button.next {
+    /* The "next slide button" will be at the right */
+    right: 0;
+}
+.carousel-button.previous{
+    transform: scaleX(-1);
+}
+
+.carousel-slides {
+    display: flex;
+    height: 100%;
+    transition: transform 1.5s;
+    transform: translateX(calc(-100% * var(--current-slide)));
+}
+.slide{
+    display: flex;
+    flex: 0 0 100%;
+    color: black;
+}
+/* @media screen and (min-width: 768px) {
+    .carousel-button {
+      font-size: 2rem;
+      margin: 1rem;
+    }
+} */
+
+.centered-div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.left-half{
+    width: 50%;
+    height: inherit;
+    position: relative;
+    left: 0;
+}
+.right-half{
+    width: 50%;
+    height: inherit;
+    position: relative;
+    right: 0;
+}
+ul li, p{
+    font-size: 25px;
+    list-style-type: none;
+}
+
+.intro{
+    height: 100%;
+    justify-content: center;
+    color: var(--color_text2);
+}
+.intro canvas
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    /* transform: scale(5); */
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+#rain
+{
+    filter: hue-rotate(90deg);
+}
+
+.about{
+    background-color: var(--color_backg3);
+    color: var(--color_text1)
+}
+.projects{
+    background-color: var(--color_backg2);
+    color: var(--color_text1); 
+}
+
+.projects > .left-half > *{
+    margin: 0px 30px 0px 30px;
+}
+.projects > .right-half
+{
+    display: flex;
+    width: 40%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    margin-left: 5%;
+}
+.projects > .right-half .image_col
+{
+    flex: 30%;
+    max-width: 30%;
+    padding: 0px 4px;
+}
+.projects > .right-half > .image_col img
+{
+    margin-top: 15%;
+    vertical-align: middle;
+}
+
+.projects > .centered-div{
+    justify-content: space-evenly;
+    text-align: center;
+}

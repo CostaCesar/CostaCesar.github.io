@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Ubuntu+Mono&family=Ubuntu:wght@300&display=swap');
+
+:root{
+    --transit_duration: 300ms;
+    --color_backg1: white;
+    --color_backg2: rgb(202, 202, 202);
+    --color_backg3: rgb(66, 66, 66);
+    --color_backg4: black;
+    --color_header: rgb(24, 24, 24);
+    --color_text1: white;
+    --color_text2: rgb(190, 190, 190);
+    --color_text3: rgb(102, 102, 102);
+    --color_text4: rgb(66, 66, 66);
+    --color_text5: black;
+
+}
+*{
+    margin: 0;
+    font-family: 'Ubuntu Mono';
+}
+/* body::-webkit-scrollbar{
+    overflow-y: hidden; 
+} */
+
+.call{
+    text-align: center;
+    height: 420px;
+    margin-bottom: 400px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+
+    position: absolute;
+    background-color: var(--color_header);
+    width: 100%;
+    height: 120px;
+    top: 0;
+}
+footer {
+    margin-top: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 160px;
+    background-color: var(--color_header);
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+.header-button{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    color: var(--color_text1);
+    filter: brightness(100%);
+    transition: all;
+    transition-duration: var(--transit_duration);
+}
+.header-button img{
+    margin-top: 10px;
+}
+.header-button:hover{
+    transform: scale(1.05);
+    filter: drop-shadow(0px 0px 5px rgba(255,255,255,0.65));
+    text-shadow: 0px 0px 5px rgba(255,255,255,0.65);
+}
+
+#footer-trademark {
+    color: var(--color_text3);
+}
+
+.footer-links{
+    display: flex;
+    width: 70%;
+    align-items: center;
+    justify-content:space-evenly;
+    margin-top: 20px;
+    font-size: 22px;
+}
+.footer-links a{
+    transition: all;
+    transition-duration: var(--transit_duration);
+    color: var(--color_text4);
+}
+.footer-links a:hover{
+    color: var(--color_text2);
+    transform: scale(1.1);
+}
+
+.page{
+    position: relative;
+    top: 120px;
+}
+.page > div{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.page > div h1{
+    font-size: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.background-img{
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    z-index: -2;
+}
+.background-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contact-container{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+.contact{
+    /* box-shadow: rgba(0, 0, 0, 1) 0px 22px 70px 4px; */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.21);
+}
+.contact *{
+    margin: 10px 0 10px 0;
+}
+.separator{
+    background-color: black;
+    width: 100%;
+    height: 5px;
+}
+.call-button
+{
+    height: 40px;
+    width: 160px;
+    font-size: 20px;
+    color: var(--color_text1);
+    background-color: var(--color_backg3);
+    border-radius: 100px;
+    transition: all;
+    transition-duration: var(--transit_duration);
+}
+.call-button:hover
+{
+    transform: scale(1.1);
+}
+.contact img{
+    filter: drop-shadow(0px 0px 16px rgba(255,255,255,0.75));
+}
+.contact h2, .contact h3{
+    text-shadow: 0px 0px 16px rgba(255,255,255,0.75);
+}

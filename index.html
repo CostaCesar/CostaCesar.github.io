@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> Caio César</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="statics.css">
+        <link rel="stylesheet" href="dinamics.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="language.js"></script>
+        <script src="carousel.js"></script>
+        <script src="animation.js"></script>
+        <script src="matrix.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="header-button" id="header-btn-start" data-btn>
+                <img src="img/globe.png" alt=" " width="64">
+                <h1>Início</h1>
+            </div>
+            <div class="header-button" id="header-btn-about" data-btn>
+                <img src="img/person-circle-svgrepo-com.png" alt=" " width="64">
+                <h1>Sobre</h1>
+            </div>
+            <div class="header-button" id="header-btn-projects" data-btn>
+                <img src="img/tools-svgrepo-com.png" alt=" " width="64">
+                <h1>Projetos</h1>
+            </div>
+        </header>
+
+        <div class="page">
+
+            <div class="carousel" data-carousel>
+
+                <div id="carousel-buttons">
+                    <button class="carousel-button previous" data-carousel-btn-prev>
+                        <img src="img/right-chevron.svg" class="chevron">
+                    </button>
+                    
+                    <button class="carousel-button next" data-carousel-btn-next>
+                        <img src="img/right-chevron.svg" class="chevron">
+                    </button>
+                </div>
+
+                <div class="carousel-slides" data-carousel-slides>
+                    <div class="slide intro centered-div">
+                        <canvas id="rain" width="160" height="200">
+                            Seu navegador não suporta essa animação
+                        </canvas>
+                        <h1> Seja bem Vindo ao meu site </h1>
+                        <h2> Conheça mais sobre mim</h2>
+                    </div>
+                    <div class="slide intro centered-div">
+                        <canvas id="fire" width="160" height="200">
+                            Seu navegador não suporta essa animação
+                        </canvas>
+                        <h1> Seja bem Vindo ao meu site </h1>
+                        <h2> Conheça mais sobre mim</h2>
+                    </div>
+                    <div class="slide about">
+                        <img class="left-half" src="img/hand-shake.jpg">
+                        <div class="right-half centered-div">
+                            <span class="centered-div">
+                                <h1> Quem sou eu? </h1>
+                                <h1> Caio Cesar Moraes Costa</h1>
+                            </span>
+                            <ul>
+                                <li> 🏚️ Um jovem de 18 anos em Contagem, Minas Gerais. </li> 
+                                <li> 👨‍💻 Programando desde os 15 anos em vários tópicos </li>
+                                <li> 📚 Estudando novas tecnologias constantemente </li>
+                                <li> 👾 Paixão com música, história e jogos</li>
+                            </ul>
+                            <!-- <button class="call-button"> Saiba Mais</button> -->
+                        </div>
+                    </div>
+                    <div class="slide projects">
+                        <div class="left-half centered-div">
+                            <h1> Um pouco do que eu ja fiz </h1>
+                            <p>
+                                Já faz mais de 4 anos que eu desenvolvo projetos em diversas áreas,
+                                como IA, Jogos, Gráficos e Emulação. Atráves deles que aprendo as
+                                tecnologias que aplico no dia a dia para resolver problemas práticos. 
+                            </p>
+                            <!-- <button class="call-button"> Veja alguns </button>  -->
+                        </div>
+                        <div class="right-half">
+                            <div class="image_col">
+                                <img src="img/lang_icons/c-original.svg" alt="C">
+                                <img src="img/lang_icons/cplusplus-original.svg" alt="C">
+                                <img src="img/lang_icons/csharp-original.svg" alt="C">
+                            </div>
+                            <div class="image_col">
+                                <img src="img/lang_icons/java-original.svg" alt="C">
+                                <img src="img/lang_icons/python-original.svg" alt="C">
+                                <img src="img/lang_icons/php-original.svg" alt="C">
+                            </div>
+                            <div class="image_col">
+                                <img src="img/lang_icons/unity-original.svg" alt="C">
+                                <img src="img/lang_icons/javascript-original.svg" alt="C">
+                                <img src="img/lang_icons/html5-original.svg" alt="C">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- <div class="separator"></div> -->
+            
+            <div class="call">
+                <div class="background-img">
+                    <!-- <img src="img/hand-shake.jpg" alt=""> -->
+                </div>
+                <h1> Quer entrar em contato?</h1>
+                <div class="contact-container">
+                    <div class="contact">
+                        <img src="img/phone-call-svgrepo-com.svg" width="100" height="100" viewBox="0 0 24 24">
+                        <h2> Telefone</h2>
+                        <h3 id="phone-text"> (+31) 99745-6806</h3>
+                        <button class="call-button"
+                            onclick="copyTextToCB('phone-text')"> 
+                            Copiar
+                        </button>
+                    </div>
+                    <div class="contact">
+                        <img src="img/linkedin-svgrepo-com.svg" width="100" height="100" viewBox="0 0 24 24">
+                        <h2> Linkedin</h2>
+                        <h3> Caio César Moraes Costa </h3>
+                        <a href="https://www.linkedin.com/in/caio-césar-moraes-costa-4b727b254/" target="_blank">
+                            <button class="call-button"> Ir Para </button>
+                        </a>
+                    </div>
+                    <div class="contact">
+                        <img src="img/github-1.svg" width="100" height="100" viewBox="0 0 24 24">
+                        <h2> Github</h2>
+                        <h3> CostaCesar</h3>
+                        <a href="https://github.com/CostaCesar/" target="_blank">
+                            <button class="call-button"> Ir Para </button>
+                        </a>
+                    </div>
+                    <div class="contact">
+                        <img src="img/Mail-Icon.svg" width="100" height="100" viewBox="0 0 24 24">
+                        <h2> Email</h2>
+                        <h3 id="email-text"> caiocaesarmcosta@gmail.com</h3>
+                        <button class="call-button"
+                            onclick="copyTextToCB('email-text')"> 
+                            Copiar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <h1 id="footer-trademark">© 2024 Costa Cesar</h1>
+            <div class="footer-links">
+                <a>Créditos</a>
+                <a>Código-Fonte</a>
+                <a>Inverter cores</a>
+            </div>
+        </footer>
+        <script>
+            $(document).ready(set_Language('pt')); 
+            load_Language();
+            
+            load_Carousel();
+            var slide0_anim = new Rain();
+            var slide1_anim = new Fire();
+
+            slide0_anim.start();
+            
+            async function copyTextToCB(textId) 
+            {
+                var copyText = document.getElementById(textId);
+                //copyText.select();
+                //copyText.setSelectionRange(0, 99999); // For mobile devices
+                try {
+                    await navigator.clipboard.writeText(copyText.innerText);
+                } catch (error) {
+                    console.log(error);
+                }
+            }
+        </script>
+    </body>
+</html>
