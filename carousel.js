@@ -16,6 +16,7 @@ class Carousel
         this.buttonPrevious = carousel.querySelector('[data-carousel-btn-prev]');
         this.buttonNext = carousel.querySelector('[data-carousel-btn-next]');
         this.slidesContainer = carousel.querySelector('[data-carousel-slides]');
+        this.animations = {};
 
         // state
         for(let i = 0; i < this.slidesContainer.children.length; i++)
@@ -27,6 +28,11 @@ class Carousel
                 this.aboutSlide = i;
             else if(element.dataset.carouselIndex == "work")
                 this.workSlide = i;
+
+            if(element.dataset.animation == "rain")
+                this.animations["rain"] = i;
+            else if(element.dataset.animation == "fire")
+                this.animations["fire"] = i;
         }
         this.numSlides = this.slidesContainer.children.length;
 
@@ -40,11 +46,11 @@ class Carousel
 
     handle_Slides()
     {
-        if(this.currentSlide == 0) slide0_anim.start()
-        else slide0_anim.stop();
+        if(this.currentSlide == this.animations["rain"]) rainAnimation.start()
+        else rainAnimation.stop();
         
-        if(this.currentSlide == 1)  slide1_anim.start()
-        else slide1_anim.stop();
+        if(this.currentSlide == this.animations["fire"])  fireAnimation.start()
+        else fireAnimation.stop();
     }
 
     gotoStart()
