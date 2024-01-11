@@ -117,19 +117,24 @@ ul li, p{
     filter: hue-rotate(90deg);
 }
 
-.about{
+#about1{
     background-color: var(--color_backg3);
     color: var(--color_text1)
 }
-.projects{
+#about2{
+    background-color: var(--color_backg4);
+    color: var(--color_text1)
+}
+
+#projects1{
     background-color: var(--color_backg2);
     color: var(--color_text1); 
 }
 
-.projects > .left-half > *{
+#projects1 > .left-half > *{
     margin: 0px 30px 0px 30px;
 }
-.projects > .right-half
+#projects1 > .right-half
 {
     display: flex;
     width: 40%;
@@ -137,20 +142,21 @@ ul li, p{
     flex-wrap: wrap;
     padding: 0 4px;
     margin-left: 5%;
+    margin-top: 3%;
 }
-.projects > .right-half .image_col
+#projects1 > .right-half .image_col
 {
-    flex: 30%;
-    max-width: 30%;
+    flex: 25%;
+    max-width: 25%;
     padding: 0px 4px;
 }
-.projects > .right-half > .image_col img
+#projects1 > .right-half > .image_col img
 {
-    margin-top: 15%;
+    margin-top: 20%;
     vertical-align: middle;
 }
 
-.projects > .centered-div{
+#projects1 > .centered-div{
     justify-content: space-evenly;
     text-align: center;
 }
