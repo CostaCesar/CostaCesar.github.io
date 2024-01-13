@@ -18,7 +18,10 @@
     background-color: var(--color_backg4);
     color: var(--color_text1)
 }
-#about2 > .right-half{
+#about2 > .right-half > *{
+    text-align: center;
+}
+#about2 > .right-half p{
     text-align: justify;
     padding: 0% 3.5%;
 }
@@ -35,17 +38,19 @@
 #projects1 > .right-half
 {
     display: flex;
-    width: 40%;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    padding: 0 4px;
+    padding: 0 5%;
     margin-left: 5%;
-    margin-top: 3%;
+    max-width: 700px;
+    min-width: 600px;
+    top: 100px
 }
 #projects1 > .right-half .image_col
 {
     flex: 25%;
     max-width: 25%;
+    min-width: 25%;
     padding: 0px 4px;
 }
 #projects1 > .right-half > .image_col img
@@ -69,25 +74,6 @@
 #projects2 > h1{
     color: var(--color_text2);
 }
-#projects2 > .three-box-div{
-    display: flex;
-    height: 100%;
-    justify-content: space-around;
-    margin-top: 25px;
-}
-#projects2 > .three-box-div > .project-box{
-    width: 400px;
-    height: 450px;
-    border-radius: 50px;
-}
-
-.thumb{
-    position: absolute;
-    width: inherit;
-    height: inherit;
-    filter: blur(0px) brightness(100%);
-    transition: filter 1s;
-}
 .thumb img{
     border-radius: 50px;
     width: 100%;
@@ -97,39 +83,13 @@
 .project-box:hover .thumb{
     filter: blur(3px) brightness(50%);
 }
-.detail{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    color: var(--color_text1);
-    z-index: 1;
-    filter: opacity(0%);
-    transition: filter 1s;
-    text-align: center;
-    width: 100%;
-    height: 100%;
-}
-.detail > h2{
-    font-size: 40px;
-}
-.detail > h3{
-    font-size: 25px;
-}
-.detail a{
-    text-decoration: none;
-    color: var(--color_text1);
-    font-size: 25px;
-    transition: 0.5s;
-}
-.detail a:hover{
-    font-size: 28px;
-}
-.detail a:visited{
-    text-decoration: none;
-    color: var(--color_text1);
-    font-size: 25px;
-}
-.project-box:hover .detail{
-    filter: opacity(100%);
+
+@media screen and (max-width: 1200px)
+{
+    #projects1 > .right-half
+    {
+        padding: 0;
+        margin-left: 0;
+        min-width: 0;
+    }
 }
