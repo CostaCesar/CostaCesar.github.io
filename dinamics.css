@@ -6,7 +6,7 @@
     --curent-slide: 0;
     position: relative;
     overflow: hidden;
-    height: 800px;
+    height: 670px;
     z-index: 1;
     background-color: var(--color_backg4);
 }
@@ -80,15 +80,15 @@
     flex-direction: column;
     justify-content: space-around;
 }
+.centered-div h1{
+    text-align: center;
+}
 .left-half{
+    /* display: flex; */
     width: 50%;
     height: inherit;
     position: relative;
     left: 0;
-}
-.left-half > img{
-    width: 100%;
-    height: 100%;
 }
 .right-half{
     width: 50%;
@@ -115,13 +115,12 @@ canvas
     height: 100%;
     justify-content: space-around;
     align-items: center;
-    margin-top: 25px;
 }
 .three-box-div > .project-box{
     position: relative;
-    width: 30%;
-    min-width: 400px;
-    max-width: 600px;
+    width: 20%;
+    min-width: 350px;
+    max-width: 500px;
     height: 450px;
     border-radius: 50px;
 }
@@ -144,13 +143,15 @@ canvas
     filter: opacity(0%);
     transition: filter 1s;
     text-align: center;
-    width: 30vi;
+    width: 100%;
     height: 100%;
 }
 .detail > h2{
+    font-weight: normal;
     font-size: 40px;
 }
 .detail > h3{
+    font-weight: normal;
     font-size: 25px;
 }
 .detail a{
@@ -158,9 +159,10 @@ canvas
     color: var(--color_text1);
     font-size: 25px;
     transition: 0.5s;
+    font-weight: bolder;
 }
 .detail a:hover{
-    font-size: 28px;
+    font-size: 27px;
 }
 .detail a:visited{
     text-decoration: none;
@@ -169,6 +171,56 @@ canvas
 }
 .project-box:hover .detail{
     filter: opacity(100%);
+}
+
+.pop-up{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.411);
+    animation-name: fade;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+}
+@keyframes fade
+{
+    0% {filter: opacity(0);}
+    100% {filter: opacity(1);}
+}
+.pop-up-message{
+    position: relative;
+    top: 5%;
+    left: 12.5%;
+    background-color: var(--color_backg3);
+    border-radius: 50px;
+    padding: 50px 0px;
+    width: 75%;
+
+    text-align: center;
+    color: var(--color_text2);
+}
+.pop-up-message a{
+    text-decoration: none;
+    color: var(--color_text1);
+}
+.pop-up-message button
+{
+    width: 25%;
+    min-width: 200px;
+    height: 50px;
+    font-size: 180%;
+    background-color: var(--color_backg2);
+    border-radius: 50px;
+    border-color: var(--color_text5);
+    border-style: solid;
+    transition: all 0.5s;
+}
+.pop-up-message button:hover
+{
+    transform: scale(1.1);
+    background-color: var(--color_backg1);
 }
 
 @media screen and (max-width: 1200px){

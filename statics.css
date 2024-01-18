@@ -19,14 +19,16 @@
     margin: 0;
     font-family: 'Ubuntu Mono';
 }
-/* body::-webkit-scrollbar{
-    overflow-y: hidden; 
-} */
+body{
+    /* overflow-y: hidden;  */
+    position: relative;
+    min-height: 100%;
+}
 
 .call{
     text-align: center;
     height: 420px;
-    margin-bottom: 400px;
+    margin-bottom: 150px;
 }
 
 header {
@@ -41,6 +43,7 @@ header {
     top: 0;
 }
 footer {
+    position: relative;
     margin-top: 120px;
     display: flex;
     align-items: center;
@@ -48,7 +51,6 @@ footer {
     flex-direction: column;
     height: 160px;
     background-color: var(--color_header);
-    position: relative;
     width: 100%;
     bottom: 0;
 }
@@ -88,6 +90,7 @@ footer {
     transition: all;
     transition-duration: var(--transit_duration);
     color: var(--color_text4);
+    text-decoration: none;
 }
 .footer-links a:hover{
     color: var(--color_text2);
@@ -98,10 +101,6 @@ footer {
     position: relative;
     top: 120px;
 }
-.page > div{
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
 .page > div h1{
     font-size: 50px;
     padding-top: 30px;
@@ -111,7 +110,6 @@ footer {
 .background-img{
     position: absolute;
     width: 100%;
-    height: inherit;
     z-index: -2;
 }
 .background-img img{
@@ -132,6 +130,8 @@ footer {
 }
 .contact *{
     margin: 10px 0 10px 0;
+    min-width: 200px;
+    max-width: 300px;
 }
 .separator{
     background-color: black;
@@ -143,8 +143,11 @@ footer {
     height: 40px;
     width: 160px;
     font-size: 20px;
-    color: var(--color_text1);
-    background-color: var(--color_backg3);
+    font-weight: bolder;
+    color: var(--color_text5);
+    background-color: transparent;
+    border-color: var(--color_text5);
+    border-style: solid;
     border-radius: 100px;
     transition: all;
     transition-duration: var(--transit_duration);
@@ -158,4 +161,18 @@ footer {
 }
 .contact h2, .contact h3{
     text-shadow: 0px 0px 16px rgba(255,255,255,0.75);
+}
+
+@media screen and (max-width: 1200px){
+    .contact-container{
+        flex-wrap: wrap;
+    }
+    .call{
+        height: 100%;
+    }
+    .footer-links{
+        width: 100%;
+        font-size: 18px;
+        justify-content: space-evenly;
+    }
 }

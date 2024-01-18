@@ -13,6 +13,9 @@
     background-color: var(--color_backg3);
     color: var(--color_text2)
 }
+#about1 > div.left-half img{
+    width: 500px;
+}
 
 #about2{
     background-color: var(--color_backg4);
@@ -40,11 +43,10 @@
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    padding: 0 5%;
     margin-left: 5%;
     max-width: 700px;
-    min-width: 600px;
-    top: 100px
+    min-width: 300px;
+    top: 10px;
 }
 #projects1 > .right-half .image_col
 {
@@ -91,5 +93,8 @@
         padding: 0;
         margin-left: 0;
         min-width: 0;
+    }
+    #about1 > div.left-half{
+        width: 0;
     }
 }

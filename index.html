@@ -30,7 +30,7 @@
             </div>
         </header>
 
-        <div class="page">
+        <div class="page" style="filter:saturate(1);">
 
             <div class="carousel" data-carousel>
 
@@ -52,28 +52,25 @@
                         <h1> Seja bem Vindo ao meu site </h1>
                         <h2> Conheça mais sobre mim</h2>
                     </div>
-                    <div class="slide intro centered-div">
-                        <h1> Seja bem Vindo ao meu site </h1>
-                        <h2> Conheça mais sobre mim</h2>
-                    </div>
                     <div id="about1" class="slide" data-carousel-index="about">
-                        <img class="left-half" src="img/hand-shake.jpg">
+                        <div class="left-half">
+                            <img class="left-half" src="img/Foto_Perfil-2.png">
+                        </div>
                         <div class="right-half centered-div">
                             <span class="centered-div">
                                 <h1> Quem sou eu? </h1>
                                 <h1> Caio Cesar Moraes Costa</h1>
                             </span>
                             <ul>
-                                <li> 🏚️ Um jovem de 18 anos em Contagem, Minas Gerais. </li> 
+                                <li> 🏚️ Um jovem de 18 anos em Contagem, Minas Gerais </li> 
                                 <li> 👨‍💻 Programando desde os 15 anos em vários tópicos </li>
-                                <li> 📚 Estudando novas tecnologias constantemente </li>
+                                <li> 📚 Estudando e aprendendo todos os dias </li>
                                 <li> 👾 Paixão com música, história e jogos</li>
                             </ul>
-                            <!-- <button class="call-button"> Saiba Mais</button> -->
                         </div>
                     </div>
                     <div id="about2" class="slide">
-                        <img class="left-half" src="img/hand-shake.jpg">
+                        <img class="left-half" src="img/formacao-1.jpg">
                         <div class="right-half centered-div">
                             <span class="centered-div">
                                 <h1> Formação </h1>
@@ -84,24 +81,36 @@
                                 como Técnico em Deselvovimento de Sistemas após cursar 3 anos (2021 - 2023)
                                 e meio (1º trimestre de 2024).
                             </p>
-                            <!-- <button class="call-button"> Saiba Mais</button> -->
                         </div>
                     </div>
                     <div id="projects1" class="slide" data-carousel-index="work">
                         <div class="left-half centered-div">
-                            <h1> Um pouco do que eu ja fiz </h1>
+                            <h1> O que eu já fiz </h1>
                             <p>
                                 Já faz mais de 4 anos que eu desenvolvo projetos em diversas áreas,
                                 como IA, Jogos, Gráficos e Emulação. Atráves deles que aprendo as
-                                tecnologias que aplico no dia a dia para resolver problemas práticos. 
+                                tecnologias que aplico no dia a dia para resolver os problemas. 
                             </p>
-                            <!-- <p>
-                                As tecnologias que conheço e posso aplicar incluem:
+                            <p>
+                                As tecnologias que conheço e aplico incluem:
                                 <br>
-                                C / C++ | Python | C# | Java | HTML/CSS | SQL | (MySQL/PostreSQL) | JavaScript/TypeScript | Unity | PHP | Docker | Git/GitHub
-                            </p> -->
-                            <!-- <h2 > No slide a seguir, estão alguns dos meu projetos </h2> -->
-                            <!-- <button class="call-button"> Veja alguns </button>  -->
+                                <br>
+                                <img src="https://img.shields.io/badge/C%20-%232370ED.svg?style=for-the-badge&logo=c++&logoColor=white">
+                                <img src="https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white">
+                                <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white">
+                                <img src="https://img.shields.io/badge/HTML5%20-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white">
+                                <img src="https://img.shields.io/badge/CSS%20-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
+                                <img src="https://img.shields.io/badge/JavaScript%20-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black">
+                                <img src="https://img.shields.io/badge/Windows%2011-%230079d5.svg?style=for-the-badge&logo=Windows%2011&logoColor=white">
+                                <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
+                                <img src="https://img.shields.io/badge/VIM-%2311AB00.svg?style=for-the-badge&logo=vim&logoColor=white">
+                                <img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white">
+                                <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white">
+                                <img src="https://img.shields.io/badge/unity-%23000000.svg?style=for-the-badge&logo=unity&logoColor=white">
+                                <img src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white">
+                                <!-- C / C++ | Python | C# | Java | HTML/CSS | SQL | (MySQL/PostreSQL) | JavaScript/TypeScript | Unity | PHP | Docker | Git/GitHub -->
+                            </p>
+                            <h2 > No slide a seguir, estão alguns dos meu projetos </h2>
                         </div>
                         <div class="right-half img-panel">
                             <div class="image_col">
@@ -221,21 +230,30 @@
         <footer>
             <h1 id="footer-trademark">© 2024 Costa Cesar</h1>
             <div class="footer-links">
-                <a>Créditos</a>
-                <a>Código-Fonte</a>
-                <a>Inverter cores</a>
+                <a onclick="createMessage('msg-credits')">Créditos</a>
+                <a href="https://github.com/CostaCesar/" target="_blank">
+                    Código-Fonte
+                </a>
+                <a onclick="changeColor()">Modo de cor</a>
             </div>
         </footer>
+
         <script>
+            $(".pop-up").attr('disabled','disabled');
             $(document).ready(set_Language('pt')); 
             load_Language();
             
             load_Carousel();
             var rainAnimation = new Rain();
             var fireAnimation = new Fire();
-
+            
             rainAnimation.start();
             
+            function changeColor()
+            {
+                var page = document.getElementsByClassName("page")[0];
+                page.style.filter = page.style.filter === "saturate(1)" ? "saturate(0)" : "saturate(1)";
+            }
             async function copyTextToCB(textId) 
             {
                 var copyText = document.getElementById(textId);
@@ -246,6 +264,35 @@
                 } catch (error) {
                     console.log(error);
                 }
+            }
+            function createMessage(type)
+            {
+                const div_popUp = document.createElement("div");
+                const div_msg = document.createElement("div");
+                const btn_close = document.createElement("button")
+
+                div_popUp.className = "pop-up";
+                div_msg.className = "pop-up-message"
+                btn_close.innerText = "Fechar"
+                btn_close.onclick = function() {document.getElementsByClassName("pop-up")[0].remove();}
+
+                if(type == "msg-credits")
+                {
+                    const creditsHeader = document.createElement("h2")
+                    const creditsMesage = document.createElement("p")
+                    creditsHeader.innerText = "Esse site foi possível graças a:";
+                    creditsMesage.innerHTML = 'Icones de <a href="https://www.svgrepo.com" target="_blank">SVG Repo</a>';
+            
+                    div_msg.appendChild(creditsHeader);
+                    div_msg.appendChild(document.createElement("br"));
+                    div_msg.appendChild(creditsMesage);
+                }
+                
+                div_msg.appendChild(document.createElement("br"));
+                div_msg.appendChild(document.createElement("br"));
+                div_msg.appendChild(btn_close);
+                div_popUp.appendChild(div_msg);
+                document.body.appendChild(div_popUp);
             }
         </script>
     </body>
