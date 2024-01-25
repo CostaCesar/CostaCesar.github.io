@@ -156,6 +156,10 @@ footer {
 {
     transform: scale(1.1);
 }
+.call-button:active
+{
+    background-color: var(--color_backg3);
+}
 .contact img{
     filter: drop-shadow(0px 0px 16px rgba(255,255,255,0.75));
 }

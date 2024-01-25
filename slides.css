@@ -13,8 +13,14 @@
     background-color: var(--color_backg3);
     color: var(--color_text2)
 }
+#about1 > div.left-half{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 #about1 > div.left-half img{
-    width: 500px;
+    height: 100%;
+    width: 600px
 }
 
 #about2{
@@ -94,7 +100,8 @@
         margin-left: 0;
         min-width: 0;
     }
-    #about1 > div.left-half{
+    #about1 > .left-half{
         width: 0;
+        height: 0;
     }
 }
