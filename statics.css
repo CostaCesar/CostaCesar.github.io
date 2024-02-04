@@ -179,4 +179,16 @@ footer {
         font-size: 18px;
         justify-content: space-evenly;
     }
+    .header-button{
+        transform: scale(0.90);
+    }
+}
+
+@media screen and (max-width: 600px){
+    .header-button{
+        transform: scale(0.80);
+    }
+    .page > div h1{
+        font-size: 40px;
+    }
 }

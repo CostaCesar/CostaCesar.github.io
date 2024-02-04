@@ -1,9 +1,15 @@
+const blockSize = 6;
+
+const canvasWidth  = Math.round(screen.width / blockSize);
+const canvasHeight = Math.round(screen.height / blockSize);
+
+// const orientation = window.innerWidth > window.innerHeight; // True: Landscape | False: Portrait
 class Fire
 {
     constructor()
     {
-        this.width = 320; 
-        this.height = 160;
+        this.width = canvasWidth; 
+        this.height = canvasHeight;
         this.baseValue = 36;
         this.decay = 2;
         this.baseModf = 1;
@@ -94,8 +100,8 @@ class Rain
 {
     constructor()
     {
-        this.width = 320; 
-        this.height = 160;
+        this.width = canvasWidth; 
+        this.height = canvasHeight;
         this.baseValue = 36;
         this.decay = 2;
         this.baseChance = 5;
