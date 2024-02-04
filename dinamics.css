@@ -143,8 +143,9 @@ canvas
     filter: opacity(0%);
     transition: filter 1s;
     text-align: center;
-    width: 100%;
+    width: 96%;
     height: 100%;
+    padding: 0 2% 0 2%;
 }
 .detail > h2{
     font-weight: normal;
@@ -154,21 +155,27 @@ canvas
     font-weight: normal;
     font-size: 25px;
 }
-.detail a{
-    text-decoration: none;
-    color: var(--color_text1);
+.detail > h4{
+    font-weight: bold;
     font-size: 25px;
     transition: 0.5s;
-    font-weight: bolder;
+    color: var(--color_text2);
 }
-.detail a:hover{
+.detail > h4:hover{
+    font-weight: bold;
     font-size: 27px;
 }
-.detail a:visited{
+/* .detail a{
     text-decoration: none;
     color: var(--color_text1);
     font-size: 25px;
-}
+    font-weight: bolder;
+} */
+/* .detail a:visited{
+    text-decoration: none;
+    color: var(--color_text1);
+    font-size: 25px;
+} */
 .project-box:hover .detail{
     filter: opacity(100%);
 }
