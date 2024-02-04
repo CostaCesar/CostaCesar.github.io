@@ -140,9 +140,9 @@
                         </canvas>
                         <h1> Projetos </h1>
                         <div class="three-box-div">
-                            <a id="projects2-geowav" class="project-box"
+                            <span id="projects2-geowav" class="project-box"
                                 href="https://github.com/EduardoBirchal/Geometry-Wave?tab=readme-ov-file"
-                                target="_blank">
+                                target="_blank" onclick="linkClick(this.attributes.id.value)">
                                 <div class="thumb">
                                     <img src="img/projects/geoWave.png" alt="">
                                 </div>
@@ -152,10 +152,10 @@
                                     <h3> Fui responsável pela implementação do multiplayer (vários jogadores)</h3>
                                     <h4> Clique para ver mais </h4>
                                 </span>
-                            </a>
-                            <a id="projects2-6502" class="project-box"
+                            </span>
+                            <span id="projects2-6502" class="project-box"
                                 href="https://github.com/CostaCesar/6502-Emulator"
-                                target="_blank">
+                                target="_blank" onclick="linkClick(this.attributes.id.value)">
                                 <div class="thumb">
                                     <img src="img/projects/6502.png" alt="">
                                 </div>
@@ -165,10 +165,10 @@
                                     <h3> O objetivo final é a emulação completa de um computador </h3>
                                     <h4> Clique para ver mais </h4> 
                                 </span>
-                            </a>
-                            <a id="projects2-6502" class="project-box"
+                            </span>
+                            <span id="projects2-ttw" class="project-box"
                                 href="https://github.com/CostaCesar/TerminalWar"
-                                target="_blank">
+                                target="_blank" onclick="linkClick(this.attributes.id.value)">
                                 <div class="thumb">
                                     <img src="img/projects/ttw.png" alt="">
                                 </div>
@@ -178,7 +178,7 @@
                                     <h3> Escrito em puro C, estou a migrar para C++ e melhorar o código no caminho </h3>
                                     <h4> Clique para ver mais </h4>
                                 </span>
-                            </a>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -238,6 +238,13 @@
             
             rainAnimation.start();
             
+            function linkClick(id)
+            {
+                let element = document.getElementById(id);
+                let isOpen = element.computedStyleMap().get('height').value >= 300;
+                
+                if(isOpen) window.open(element.getAttribute('href'),'_blank');
+            }
             function changeColor()
             {
                 var page = document.getElementsByClassName("page")[0];

@@ -6,7 +6,7 @@
     --curent-slide: 0;
     position: relative;
     overflow: hidden;
-    height: 670px;
+    height: 750px;
     z-index: 1;
     background-color: var(--color_backg4);
 }
@@ -257,6 +257,6 @@ canvas
         width: 100%
     }
     .project-box:hover{
-        height: 250px;
+        height: 300px;
     }
 }
