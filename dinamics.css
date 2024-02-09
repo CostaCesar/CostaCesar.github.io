@@ -1,12 +1,15 @@
 .chevron{
     width: 100%;
-    height: 100%;
+}
+.local-animation{
+    height: 50%;
+    top: unset;
 }
 .carousel{
     --curent-slide: 0;
     position: relative;
     overflow: hidden;
-    height: 750px;
+    min-height: 1400px;
     z-index: 1;
     background-color: var(--color_backg4);
 }
@@ -25,6 +28,7 @@
 
     /* basic styling */
     width: 40px;
+    height: 10em;
     padding: 0;
     margin: 0.5rem;
     border-radius: 50%;
@@ -44,17 +48,17 @@
     100% {filter: invert(1) brightness(90%);}
 }
 
-.carousel-button:hover
+/* .carousel-button:hover
 {
     filter: invert(1) drop-shadow(0px 0px 8px rgba(255,255,255,255));
 }
 .carousel-button.next {
-    /* The "next slide button" will be at the right */
+    /* The "next slide button" will be at the right * /
     right: 0;
 }
 .carousel-button.previous{
-    transform: scaleX(-1);
-}
+    transform: scaleX(-1) translateY(-50%);
+} */
 
 .carousel-slides {
     display: flex;
@@ -64,15 +68,16 @@
 }
 .slide{
     display: flex;
+    flex-direction: column;
     flex: 0 0 100%;
     color: black;
 }
-/* @media screen and (min-width: 768px) {
-    .carousel-button {
-      font-size: 2rem;
-      margin: 1rem;
-    }
-} */
+
+.panel{
+    display: flex;
+    width: 100%;
+    min-height: 700px;
+}
 
 .centered-div{
     display: flex;
@@ -106,6 +111,7 @@ ul li, p{
 canvas
 {
     position: absolute;
+    top: 0;
     height: 100%;
     width: 100%;
     z-index: -1;
@@ -129,10 +135,21 @@ canvas
 }
 .thumb{
     position: relative;
+    display: flex;
     width: 100%;
     height: inherit;
     filter: blur(0px) brightness(100%);
     transition: filter 1s;
+}
+.thumb h2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 40px;
+    color: var(--color_text2);
+    text-shadow: 3px 3px 15px black, -3px -3px 15px black, -3px 3px 15px black, 3px -3px 15px black ;
+    transform: translateY(30%);
+    transition: all 1s;
 }
 .detail{
     position: absolute;
@@ -168,19 +185,12 @@ canvas
     font-weight: bold;
     font-size: 27px;
 }
-/* .detail a{
-    text-decoration: none;
-    color: var(--color_text1);
-    font-size: 25px;
-    font-weight: bolder;
-} */
-/* .detail a:visited{
-    text-decoration: none;
-    color: var(--color_text1);
-    font-size: 25px;
-} */
 .project-box:hover .detail{
     filter: opacity(100%);
+    cursor: pointer;
+}
+.project-box:hover .thumb h2{
+    filter: opacity(0%);
 }
 
 .pop-up{
@@ -237,6 +247,7 @@ canvas
     .right-half, .left-half{
         width: 100%;
         height: 100%;
+        padding: 0 10px;
     }
     img.right-half, img.left-half, .img-panel{
         width: 0;

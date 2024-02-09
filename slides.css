@@ -26,10 +26,10 @@
     background-color: var(--color_backg4);
     color: var(--color_text1)
 }
-#about2 > .right-half > *{
+#about2 > .left-half > *{
     text-align: center;
 }
-#about2 > .right-half p{
+#about2 > .left-half p{
     text-align: justify;
     padding: 0% 3.5%;
 }

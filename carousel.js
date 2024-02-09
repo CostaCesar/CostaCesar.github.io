@@ -37,8 +37,11 @@ class Carousel
         this.numSlides = this.slidesContainer.children.length;
 
         // add events
-        this.buttonPrevious.addEventListener('click', this.handlePrevious.bind(this));
-        this.buttonNext.addEventListener('click', this.handleNext.bind(this));
+        if(this.buttonNext && this.buttonPrevious)
+        {
+            this.buttonPrevious.addEventListener('click', this.handlePrevious.bind(this));
+            this.buttonNext.addEventListener('click', this.handleNext.bind(this));
+        }
         buttons[0].addEventListener('click', this.gotoStart.bind(this));
         buttons[1].addEventListener('click', this.gotoAbout.bind(this));
         buttons[2].addEventListener('click', this.gotoWorks.bind(this));
