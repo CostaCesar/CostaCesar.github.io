@@ -49,6 +49,9 @@ class Carousel
 
     handle_Slides()
     {
+        window.scrollTo(0, 0);
+        this.carousel.style.setProperty('--current-slide', this.currentSlide);
+        
         if(this.currentSlide == this.animations["rain"]) rainAnimation.start()
         else rainAnimation.stop();
         
@@ -59,19 +62,16 @@ class Carousel
     gotoStart()
     {
         this.currentSlide = this.startSlide;
-        this.carousel.style.setProperty('--current-slide', this.currentSlide);
         this.handle_Slides();
     }
     gotoAbout()
     {
         this.currentSlide = this.aboutSlide;
-        this.carousel.style.setProperty('--current-slide', this.currentSlide);
         this.handle_Slides();
     }
     gotoWorks()
     {
         this.currentSlide = this.workSlide;
-        this.carousel.style.setProperty('--current-slide', this.currentSlide);
         this.handle_Slides();
     }
 
