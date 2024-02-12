@@ -17,6 +17,7 @@ class Carousel
         this.buttonNext = carousel.querySelector('[data-carousel-btn-next]');
         this.slidesContainer = carousel.querySelector('[data-carousel-slides]');
         this.animations = {};
+        this.buttons = buttons;
 
         // state
         for(let i = 0; i < this.slidesContainer.children.length; i++)
@@ -59,19 +60,35 @@ class Carousel
         else fireAnimation.stop();
     }
 
+    buttonHighLight()
+    {
+        for(let i = 0; i < this.numSlides; i++)
+        {
+            if(this.currentSlide == i)
+            {
+                console.log("Focusing button " + i);
+                this.buttons[i].classList.add('active-button');
+            }
+            else this.buttons[i].classList.remove('active-button');
+        }
+    }
+
     gotoStart()
     {
         this.currentSlide = this.startSlide;
+        this.buttonHighLight();
         this.handle_Slides();
     }
     gotoAbout()
     {
         this.currentSlide = this.aboutSlide;
+        this.buttonHighLight();
         this.handle_Slides();
     }
     gotoWorks()
     {
         this.currentSlide = this.workSlide;
+        this.buttonHighLight();
         this.handle_Slides();
     }
 

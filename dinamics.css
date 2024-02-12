@@ -203,6 +203,7 @@ canvas
     animation-name: fade;
     animation-duration: 0.5s;
     animation-iteration-count: 1;
+    z-index: 20;
 }
 @keyframes fade
 {
