@@ -71,6 +71,7 @@ class Carousel
             }
             else this.buttons[i].classList.remove('active-button');
         }
+
     }
 
     gotoStart()

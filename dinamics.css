@@ -84,10 +84,9 @@
     align-items: center;
     flex-direction: column;
     justify-content: space-around;
-}
-.centered-div h1{
     text-align: center;
 }
+
 .left-half{
     /* display: flex; */
     width: 50%;
@@ -101,6 +100,19 @@
     position: relative;
     right: 0;
 }
+
+.three-col{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.three-col > .centered-div{
+    width: 33%;
+    padding: 0 5%;
+}
+
 ul{
     padding-left: 20px;
 }
@@ -276,11 +288,21 @@ canvas
     }
 }
 
+@media screen and (max-width: 900px){
+    .three-col{
+        height: auto;
+        flex-direction: column;
+    }
+    .three-col > .centered-div{
+        width: 75%;
+        padding-top: 50px;
+    }
+}
 @media screen and (max-width: 600px){
     ul li, p{
         font-size: 23px;
     }
-    .carousel{
-        height: 800px;
+    .thumb h2{
+        font-size: 36px;
     }
 }
