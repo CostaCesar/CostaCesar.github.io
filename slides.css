@@ -2,36 +2,39 @@
 .intro{
     height: 100%;
     justify-content: center;
-    color: var(--color_text2);
+    color: var(--color_alt_text);
 }
 #rain
 {
     filter: hue-rotate(90deg);
 }
 
-#about1{
-    background-color: var(--color_backg3);
-    color: var(--color_text2)
-}
-#about1 > div.left-half{
+#about > div.left-half{
     display: flex;
     align-items: center;
     justify-content: center;
 }
-#about1 > div.left-half img{
+#about > div.left-half img{
     width: 600px
 }
 
-#about2{
-    background-color: var(--color_backg4);
-    color: var(--color_text1)
-}
-#about2 > .left-half > *{
+#grad_em > .left-half > *{
     text-align: center;
 }
-#about2 > .left-half p{
+#grad_em > .left-half p{
     text-align: justify;
     padding: 0% 3.5%;
+}
+
+#grad_gd > .right-half > *{
+    text-align: center;
+}
+#grad_gd > .right-half p{
+    text-align: justify;
+    padding: 0% 3.5%;
+}
+#grad_gd > .left-half > img{
+    width: 500px
 }
 
 #projects1{

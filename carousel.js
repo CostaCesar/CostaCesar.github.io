@@ -7,7 +7,25 @@ function modulo(number, mod)
     return result;
 }
 
+class Slide
+{
+    constructor(index, animation)
+    {
+        this.index = index;
+        this.animation = animation;
+    }
 
+    handle_animations()
+    {
+        if(this.animation == "rain")
+            rainAnimation.start()
+        else rainAnimation.stop();
+
+        // if(this.animation == "fire")
+        //     fireAnimation.start()
+        // else fireAnimation.stop();
+    }
+}
 class Carousel 
 {
     constructor(carousel, buttons) 
@@ -22,10 +40,7 @@ class Carousel
         for(let i = 0; i < this.slidesContainer.children.length; i++)
         {
             let element = this.slidesContainer.children[i];
-            this.slides[i] = element.dataset.carouselIndex;
-
-            // if(element.dataset.animation != undefined)
-            //     this.animations[i] = element.dataset.animation;
+            this.slides[i] = new Slide(element.dataset.carouselIndex, element.dataset.animation);
             
             buttons[i].addEventListener('click', this.gotoSlide.bind(this, i));
         }
@@ -45,13 +60,8 @@ class Carousel
         window.scrollTo(0, 0);
         this.carousel.style.setProperty('--current-slide', this.currentSlide);
         
-        // if(this.currentSlide == this.animations["rain"])
-        //     rainAnimation.start()
-        // else rainAnimation.stop();
-        
-        // if(this.currentSlide == this.animations["fire"])
-        //     fireAnimation.start()
-        // else fireAnimation.stop();
+        this.slides[this.currentSlide].handle_animations();
+        this.buttonHighLight();
     }
 
     buttonHighLight()

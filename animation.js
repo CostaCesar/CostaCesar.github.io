@@ -1,4 +1,4 @@
-const blockSize = 6;
+const blockSize = 8;
 
 const canvasWidth  = Math.round(screen.width / blockSize);
 const canvasHeight = Math.round(screen.height / blockSize);
@@ -189,6 +189,7 @@ class Rain
     {
         clearInterval(this.updateId);
         clearInterval(this.generatorId);
+        console.log("Rain stopped");
         this.updateId = 0;
     }
 }
