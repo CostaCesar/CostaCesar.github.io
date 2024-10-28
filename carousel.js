@@ -21,9 +21,9 @@ class Slide
             rainAnimation.start()
         else rainAnimation.stop();
 
-        // if(this.animation == "fire")
-        //     fireAnimation.start()
-        // else fireAnimation.stop();
+        if(this.animation == "fire")
+            fireAnimation.start()
+        else fireAnimation.stop();
     }
 }
 class Carousel 

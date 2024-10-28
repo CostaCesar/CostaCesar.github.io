@@ -4,9 +4,18 @@
     justify-content: center;
     color: var(--color_alt_text);
 }
+.intro h1, .intro h2
+{
+    text-shadow: 0px 0px 3px var(--color_text);
+}
 #rain
 {
     filter: hue-rotate(90deg);
+}
+
+#contact
+{
+    width: 100%;
 }
 
 #about > div.left-half{
@@ -46,16 +55,6 @@
     height: 100%;
     background-color: var(--color_backg2);
     color: var(--color_text1); 
-}
-
-#projects1 > h1, #projects1 p {
-    color: var(--color_text5);
-}
-#projects1 .centered-div h1{
-    color: var(--color_text4);
-}
-#projects1 p > img{
-    height: 36px;
 }
 
 #projects2{
