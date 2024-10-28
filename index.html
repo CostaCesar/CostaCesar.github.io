@@ -1,330 +1,335 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title> Caio César</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="statics.css">
-        <link rel="stylesheet" href="dinamics.css">
-        <link rel="stylesheet" href="slides.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="carousel.js"></script>
-        <script src="animation.js"></script>
-    </head>
-    <body>
-        <header>
-            <div class="header-button" id="header-btn-start" data-btn>
-                <img src="img/icons/globe.png" alt=" " width="64">
-                <h1>Início</h1>
-            </div>
-            <div class="header-button" id="header-btn-about" data-btn>
-                <img src="img/icons/person-circle-svgrepo-com.png" alt=" " width="64">
-                <h1>Sobre</h1>
-            </div>
-            <div class="header-button" id="header-btn-projects" data-btn>
-                <img src="img/icons/tools-svgrepo-com.png" alt=" " width="64">
-                <h1>Projetos</h1>
-            </div>
-        </header>
 
-        <div class="page" style="filter:saturate(1);">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Caio César</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="statics.css">
+    <link rel="stylesheet" href="dinamics.css">
+    <link rel="stylesheet" href="gears.css">
+    <link rel="stylesheet" href="slides.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="carousel.js"></script>
+    <script src="animation.js"></script>
+</head>
 
-            <div class="carousel" data-carousel>
+<body>
+    <header>
+        <div class="header-button active-button" data-btn>
+            <img src="img/icons/menu.png" alt=" " width="64">
+            <h1>Início</h1>
+        </div>
+        <div class="header-button inverted" data-btn>
+            <img src="img/icons/globe.png" alt=" " width="64">
+            <h1>Contato</h1>
+        </div>
+        <div class="header-button inverted" data-btn>
+            <img src="img/icons/person-circle.png" alt=" " width="64">
+            <h1>Sobre</h1>
+        </div>
+        <div class="header-subsection header-button" data-btn>
+            <img src="img/icons/flask.png" alt=" " width="64">
+            <h1>Técnico</h1>
+        </div>
+        <div class="header-subsection header-button"  data-btn>
+            <img src="img/icons/graduate.png" alt=" " width="64">
+            <h1>Graduação</h1>
+        </div>
+        <div class="header-button" data-btn>
+            <img src="img/icons/terminal.png" alt=" " width="64">
+            <h1>Tecnologias</h1>
+        </div>
+        <div class="header-button" data-btn>
+            <img src="img/icons/tools.png" alt=" " width="64">
+            <h1>Projetos</h1>
+        </div>
+    </header>
+    <div class="page" style="filter:saturate(1);">
 
-                <!-- <div id="carousel-buttons">
-                    <button class="carousel-button previous" data-carousel-btn-prev>
-                        <img src="img/icons/right-chevron.svg" class="chevron">
-                    </button>
-                    
-                    <button class="carousel-button next" data-carousel-btn-next>
-                        <img src="img/icons/right-chevron.svg" class="chevron">
-                    </button>
-                </div> -->
-
-                <div class="carousel-slides" data-carousel-slides>
-                    <div class="slide " data-carousel-index="start" data-animation="rain">
-                        <canvas id="rain">
-                            Seu navegador não suporta essa animação
-                        </canvas>
-                        <div class="panel intro centered-div">
-                            <h1> Seja bem Vindo ao meu site </h1>
-                            <h2> Conheça mais sobre mim</h2>
-                            <br> <br> <br> <br> <br> <br> <br>
-                            <h1> Use o menu acima para navegar</h2>
-                        </div>
-                        <div class="panel intro centered-div">
-                            <h1> Feito com o poder de HTML, CSS e JavaScript</h1>
-                            <h2> Mas tem muito mais que isso...</h2>
+        <div class="carousel" data-carousel>
+            <div class="carousel-slides" data-carousel-slides>
+                <div class="slide" data-carousel-index="start" data-animation="rain">
+                    <canvas id="rain">
+                        Seu navegador não suporta essa animação
+                    </canvas>
+                    <div id="intro" class="panel centered-div">
+                        <h1> Seja bem vindo </h1>
+                        <h2> Conheça mais sobre mim</h2>
+                        <br> <br> <br> <br> <br> <br> <br>
+                        <h2> Use o menu ao lado para navegar</h2>
+                    </div>
+                </div>
+                <div class="slide" data-carousel-index="contact">
+                    <div id="contact" class="panel centered-div">
+                        <h1> Quer entrar em contato?</h1>
+                        <div class="container">
+                            <div class="contact">
+                                <img src="img/icons/linkedin.svg" width="100" height="100" viewBox="0 0 24 24">
+                                <h2> Linkedin</h2>
+                                <h3> Caio César Moraes Costa </h3>
+                                <a href="https://www.linkedin.com/in/caio-césar-moraes-costa-4b727b254/" target="_blank">
+                                    <button class="call-button"> Ir Para </button>
+                                </a>
+                            </div>
+                            <div class="contact">
+                                <img src="img/icons/github-1.svg" width="100" height="100" viewBox="0 0 24 24">
+                                <h2> Github</h2>
+                                <h3> CostaCesar</h3>
+                                <a href="https://github.com/CostaCesar/" target="_blank">
+                                    <button class="call-button"> Ir Para </button>
+                                </a>
+                            </div>
+                            <div class="contact">
+                                <img src="img/icons/Mail-Icon.svg" width="100" height="100" viewBox="0 0 24 24">
+                                <h2> Email</h2>
+                                <h3 id="email-text"> caiocaesarmcosta@gmail.com</h3>
+                                <button class="call-button" onclick="copyTextToCB('email-text')">
+                                    Copiar
+                                </button>
+                            </div>
                         </div>
                     </div>
-                    <div class="slide" data-carousel-index="about">
-                        <div id="about1" class="panel">
-                            <div class="left-half">
-                                <img class="left-half" src="img/About1.png">
-                            </div>
-                            <div class="right-half centered-div">
-                                <span class="centered-div">
-                                    <h1> Quem sou eu? </h1>
-                                    <h1> Caio Cesar Moraes Costa</h1>
-                                </span>
-                                <ul>
-                                    <li> 🏚️ Um jovem de 18 anos em Contagem, Minas Gerais </li> 
-                                    <li> 👨‍💻 Programando desde os 15 anos em vários tópicos </li>
-                                    <li> 📚 Estudando e aprendendo todos os dias </li>
-                                    <li> 👾 Paixão com música, história e jogos</li>
+                </div>
+                <div class="slide" data-carousel-index="about">
+                    <div id="about" class="panel">
+                        <div class="left-half bottom-one">
+                            <img class="left-half" src="img/About1.png">
+                        </div>
+                        <div class="right-half centered-div paded-half top-one">
+                            <span class="centered-div">
+                                <h1> Quem sou eu? </h1>
+                                <h1> Caio Cesar Moraes Costa</h1>
+                            </span>
+                            <ul>
+                                <li> 🏚️ Um jovem de 10 anos em Contagem, Minas Gerais </li>
+                                <li> 👨‍💻 Programando desde os 15 anos em vários tópicos </li>
+                                <li> 📚 Estudando e aprendendo todos os dias </li>
+                                <li> 👾 Paixão com música, história e jogos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide" data-carousel-index="coltec">
+                    <div id="grad_em" class="panel">
+                        <div class="left-half centered-div paded-half">
+                            <span class="centered-div">
+                                <h1> Desenvolvimento de Sistemas</h1>
+                            </span>
+                            <p>
+                                Formado pelo Colégio Técnico da Universidade Federal de Minas Gerais,
+                                como <b> Técnico em Deselvovimento de Sistemas </b>.
+                            </p>
+                        </div>
+                        <div class="right-half centered-div hide">
+                            <div class="gears">
+                                <ul class="rond one">
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <ul class="rond two">
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
                                 </ul>
                             </div>
                         </div>
-                        <div id="about2" class="panel">
-                            <div class="left-half centered-div">
-                                <span class="centered-div">
-                                    <h1> Formação </h1>
-                                    <h1> Desenvolvedor de Sistemas</h1>
-                                </span>
-                                <p>
-                                    Formando no Colégio Técnico da Universidade Federal de Minas Gerais,
-                                    como Técnico em Deselvovimento de Sistemas.
-                                </p>
-                            </div>
-                            <img class="right-half" src="img/About2.jpg">
-                        </div>
                     </div>
-                    <div class="slide" data-carousel-index="work" data-animation="fire">
-                        <div id="projects1" class="panel">
-                            <h1> Especialidades </h1>
-                            <div class="three-col">
-                                <span class="centered-div">
-                                    <h1> Tecnologias </h1>
-                                    <p>
-                                        Os sistemas que eu domino
-                                    </p>
-                                    <br> <br>
-                                    <p>
-                                        <img src="https://img.shields.io/badge/Windows-%230079d5.svg?style=for-the-badge&logo=Windows%2011&logoColor=white">
-                                        <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
-                                        <img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white">
-                                        <img src="https://img.shields.io/badge/Postgre%20SQL-beige?style=for-the-badge&logo=postgresql&logoColor=black">
-                                        <img src="https://img.shields.io/badge/CMake-%23064F8C?style=for-the-badge&logo=cmake&logoColor=white">
-                                        <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white">
-                                        <img src="https://img.shields.io/badge/.Net-%23239120.svg?style=for-the-badge&logo=dotnet&logoColor=white">
-                                    </p>
-                                </span>
-                                <span class="centered-div">
-                                    <h1> Linguagens </h1>
-                                    <p>
-                                        As minhas mais usadas
-                                    </p>
-                                    <br> <br>
-                                    <p>
-                                        <img src="https://img.shields.io/badge/C%2FC%2B%2B-purple?style=for-the-badge&logo=cplusplus&logoColor=white">
-                                        <img src="https://img.shields.io/badge/c%23%20-512BD4.svg?style=for-the-badge&logo=csharp&logoColor=white">
-                                        <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white">
-                                        <img src="https://img.shields.io/badge/JavaScript%20-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black">
-                                        <img src="https://img.shields.io/badge/Typescript-%233178C6?style=for-the-badge&logo=typescript&logoColor=white">
-                                        <img src="https://img.shields.io/badge/Python-%233776AB?style=for-the-badge&logo=python&logoColor=yellow">
-                                        <img src="https://img.shields.io/badge/CSS%20-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
-                                        <img src="https://img.shields.io/badge/HTML5%20-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white">
-                                    </p>
-                                </span>
-                                <span class="centered-div">
-                                    <h1> Programas </h1>
-                                    <p>
-                                        Softwares por trás de tudo
-                                    </p>
-                                    <br> <br>
-                                    <p>
-                                        <img src="https://img.shields.io/badge/unity-%23000000.svg?style=for-the-badge&logo=unity&logoColor=white">
-                                        <img src="https://img.shields.io/badge/VIM-%2311AB00.svg?style=for-the-badge&logo=vim&logoColor=white">
-                                        <img src="https://img.shields.io/badge/Visual%20Studio-%235C2D91?style=for-the-badge&logo=visualstudio&logoColor=white">
-                                        <img src="https://img.shields.io/badge/VS%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white">
-                                        <img src="https://img.shields.io/badge/Postman-FF6C37.svg?style=for-the-badge&logo=postman&logoColor=white">
-                                    </p>
-                                </span>
-                            </div>
-                            <!-- <div class="right-half img-panel">
-                                <div class="image_col">
-                                    <img src="img/lang_icons/c-original.svg" alt="C">
-                                    <img src="img/lang_icons/cplusplus-original.svg" alt="C">
-                                    <img src="img/lang_icons/csharp-original.svg" alt="C">
-                                </div>
-                                <div class="image_col">
-                                    <img src="img/lang_icons/java-original.svg" alt="C">
-                                    <img src="img/lang_icons/python-original.svg" alt="C">
-                                    <img src="img/lang_icons/postgresql-original.svg" alt="C">
-                                </div>
-                                <div class="image_col">
-                                    <img src="img/lang_icons/unity-original.svg" alt="C">
-                                    <img src="img/lang_icons/javascript-original.svg" alt="C">
-                                    <img src="img/lang_icons/html5-original.svg" alt="C">
-                                </div>
-                            </div> -->
+                </div> 
+                <div class="slide" data-carousel-index="cc-ufmg">
+                    <div id="grad_gd" class="panel">
+                        <div class="left-half centered-div bottom-one">
+                            <img src="img/icons/processor.png">
                         </div>
-                        <div id="projects2" class="panel">
-                            <canvas id="fire" width="160" height="200" class="local-animation">
-                                Seu navegador não suporta essa animação
-                            </canvas>
-                            <span class="canvas-container">
+                        <div class="right-half centered-div paded-half top-one">
+                            <span class="centered-div">
+                                <h1> Ciência da Computação</h1>
                             </span>
-                            <h1> Projetos </h1>
-                            <div class="three-box-div">
-                                <span id="projects2-geowav" class="project-box"
-                                    href="https://github.com/EduardoBirchal/Geometry-Wave?tab=readme-ov-file"
-                                    target="_blank" onclick="linkClick(this.attributes.id.value)">
-                                    <div class="thumb">
-                                        <img src="img/projects/geoWave.png" alt="">
-                                        <h2>Geometry Wave</h2>
-                                    </div>
-                                    <span class="detail">
-                                        <h2>Geometry Wave</h2>
-                                        <h3> Jogo arcade desenvolvido em equipe para uma competição de Unity</h3>
-                                        <h3> Fui responsável pela implementação do multiplayer (vários jogadores)</h3>
-                                        <h4> Clique para ver mais </h4>
-                                    </span>
-                                </span>
-                                <span id="projects2-6502" class="project-box"
-                                    href="https://github.com/CostaCesar/6502-Emulator"
-                                    target="_blank" onclick="linkClick(this.attributes.id.value)">
-                                    <div class="thumb">
-                                        <img src="img/projects/6502.png" alt="">
-                                        <h2>Emulador 6502</h2>
-                                    </div>
-                                    <span class="detail">
-                                        <h2>Emulador 6502</h2>
-                                        <h3> Projeto para a emulação do microprocessador 6502 e suas variantes</h3>
-                                        <h3> O objetivo final é a emulação completa de um computador </h3>
-                                        <h4> Clique para ver mais </h4> 
-                                    </span>
-                                </span>
-                                <span id="projects2-ttw" class="project-box"
-                                    href="https://github.com/CostaCesar/TerminalWar"
-                                    target="_blank" onclick="linkClick(this.attributes.id.value)">
-                                    <div class="thumb">
-                                        <img src="img/projects/ttw.png" alt="">
-                                        <h2>Total Terminal War</h2>
-                                    </div>
-                                    <span class="detail">
-                                        <h2>Total Terminal War</h2>
-                                        <h3> Jogo de estratégia em turnos para o terminal do Windows, incluindo som, IA e mods</h3>
-                                        <h3> Escrito em puro C, estou a migrar para C++ e melhorar o código no caminho </h3>
-                                        <h4> Clique para ver mais </h4>
-                                    </span>
-                                </span>
-                            </div>
+                            <p>
+                                Em formação pelo Departamento de Ciência da Computação, na Universidade Federal de Minas
+                                Gerais desde 2024, no <b> curso de Ciência da Computação </b>.
+                            </p>
                         </div>
                     </div>
-                </div>
-            </div>
-            
-            <div class="call">
-                <div class="background-img">
-                </div>
-                <h1> Quer entrar em contato?</h1>
-                <div class="contact-container">
-                    <div class="contact">
-                        <img src="img/icons/linkedin-svgrepo-com.svg" width="100" height="100" viewBox="0 0 24 24">
-                        <h2> Linkedin</h2>
-                        <h3> Caio César Moraes Costa </h3>
-                        <a href="https://www.linkedin.com/in/caio-césar-moraes-costa-4b727b254/" target="_blank">
-                            <button class="call-button"> Ir Para </button>
-                        </a>
+                </div> 
+                <div class="slide" data-carousel-index="programing">
+                    <div id="programing" class="panel centered-div">
+                        <span class="centered-div">
+                            <h1> Linguagens </h1>
+                            <p>
+                                A maior parte da programação que faço
+                            </p>
+                            <br> <br>
+                            <p>
+                                <img src="https://img.shields.io/badge/C%2FC%2B%2B-purple?style=for-the-badge&logo=cplusplus&logoColor=white">
+                                <img src="https://img.shields.io/badge/c%23%20-512BD4.svg?style=for-the-badge&logo=dotnet&logoColor=white">
+                                <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=spring&logoColor=black">
+                                <img src="https://img.shields.io/badge/JavaScript%20-%23F7DF1E.svg?style=for-the-badge&logo=javascript&logoColor=black">
+                                <img src="https://img.shields.io/badge/Typescript-%233178C6?style=for-the-badge&logo=typescript&logoColor=white">
+                                <img src="https://img.shields.io/badge/Python-%233776AB?style=for-the-badge&logo=python&logoColor=yellow">
+                                <img src="https://img.shields.io/badge/CSS%20-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
+                                <img src="https://img.shields.io/badge/HTML5%20-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white">
+                            </p>
+                        </span>
+                        <span class="centered-div">
+                            <h1> Programas </h1>
+                            <p>
+                                Os softwares por trás de meus projetos
+                            </p>
+                            <br> <br>
+                            <p>
+                                <img src="https://img.shields.io/badge/unity-%23000000.svg?style=for-the-badge&logo=unity&logoColor=white">
+                                <img src="https://img.shields.io/badge/VIM-%2311AB00.svg?style=for-the-badge&logo=vim&logoColor=white">
+                                <img src="https://img.shields.io/badge/CMake-%23064F8C?style=for-the-badge&logo=cmake&logoColor=white">
+                                <img src="https://img.shields.io/badge/VS%20Code%2FCodium-0078d7.svg?style=for-the-badge&logo=vscodium&logoColor=white">
+                                <img src="https://img.shields.io/badge/Postman-FF6C37.svg?style=for-the-badge&logo=postman&logoColor=white">
+                            </p>
+                        </span>
+                        <span class="centered-div">
+                            <h1> Sistemas </h1>
+                            <p>
+                                Os ambientes que tenho familiaridade
+                            </p>
+                            <br> <br>
+                            <p>
+                                <img src="https://img.shields.io/badge/Windows-%230079d5.svg?style=for-the-badge&logo=gitforwindows&logoColor=white">
+                                <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black">
+                                <img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white">
+                                <img src="https://img.shields.io/badge/Postgre%20SQL-beige?style=for-the-badge&logo=postgresql&logoColor=black">
+                                <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white">
+                                <img src="https://img.shields.io/badge/.Net-%23239120.svg?style=for-the-badge&logo=dotnet&logoColor=white">
+                            </p>
+                        </span>
                     </div>
-                    <div class="contact">
-                        <img src="img/icons/github-1.svg" width="100" height="100" viewBox="0 0 24 24">
-                        <h2> Github</h2>
-                        <h3> CostaCesar</h3>
-                        <a href="https://github.com/CostaCesar/" target="_blank">
-                            <button class="call-button"> Ir Para </button>
-                        </a>
-                    </div>
-                    <div class="contact">
-                        <img src="img/icons/Mail-Icon.svg" width="100" height="100" viewBox="0 0 24 24">
-                        <h2> Email</h2>
-                        <h3 id="email-text"> caiocaesarmcosta@gmail.com</h3>
-                        <button class="call-button"
-                            onclick="copyTextToCB('email-text')"> 
-                            Copiar
-                        </button>
+                </div>
+                <div class="slide" data-carousel-index="geo-wave" data-animation="fire">
+                    <div id="project-geo-wave" class="panel">
+                        <canvas id="fire" width="160" height="200">
+                            Seu navegador não suporta essa animação
+                        </canvas>
+                        <span class="canvas-container">
+                        </span>
+                        <div class="three-box-div">
+                            <span id="projects2-geowav" class="project-box"
+                                href="https://github.com/EduardoBirchal/Geometry-Wave?tab=readme-ov-file"
+                                target="_blank" onclick="linkClick(this.attributes.id.value)">
+                                <div class="thumb">
+                                    <img src="img/projects/geoWave.png" alt="">
+                                    <h2>Geometry Wave</h2>
+                                </div>
+                                <span class="detail">
+                                    <h2>Geometry Wave</h2>
+                                    <h3> Jogo arcade desenvolvido em equipe para uma competição de Unity</h3>
+                                    <h3> Fui responsável pela implementação do multiplayer em LAN</h3>
+                                    <h4> Clique para ver mais </h4>
+                                </span>
+                            </span>
+                            <span id="projects2-6502" class="project-box"
+                                href="https://github.com/CostaCesar/6502-Emulator"
+                                target="_blank" onclick="linkClick(this.attributes.id.value)">
+                                <div class="thumb">
+                                    <img src="img/projects/6502.png" alt="">
+                                    <h2>Emulador 6502</h2>
+                                </div>
+                                <span class="detail">
+                                    <h2>Emulador 6502</h2>
+                                    <h3> Projeto para a emulação do microprocessador 6502 e suas variantes</h3>
+                                    <h3> O objetivo final é a emulação completa de um computador </h3>
+                                    <h4> Clique para ver mais </h4> 
+                                </span>
+                            </span>
+                            <span id="projects2-ttw" class="project-box"
+                                href="https://github.com/CostaCesar/TerminalWar"
+                                target="_blank" onclick="linkClick(this.attributes.id.value)">
+                                <div class="thumb">
+                                    <img src="img/projects/ttw.png" alt="">
+                                    <h2>Total Terminal War</h2>
+                                </div>
+                                <span class="detail">
+                                    <h2>Total Terminal War</h2>
+                                    <h3> Jogo de estratégia em turnos para o terminal do Windows, incluindo áudio, IA e conteúdo gerado pelo jogador</h3>
+                                    <h3> Atualmente, estou migrando e aprimorado para C++</h3>
+                                    <h4> Clique para ver mais </h4>
+                                </span>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <footer>
-            <h1 id="footer-trademark">© 2024 Costa Cesar</h1>
-            <div class="footer-links">
-                <a onclick="createMessage('msg-credits')">Créditos</a>
-                <a href="https://github.com/CostaCesar/Pagina-Pessoal" target="_blank">
-                    Código-Fonte
-                </a>
-                <a onclick="changeColor()">Modo de cor</a>
-            </div>
-        </footer>
+    <footer>
+        <a onclick="createMessage('msg-credits')">Créditos</a>
+        <a href="https://github.com/CostaCesar/Pagina-Pessoal" target="_blank">
+            Código-Fonte
+        </a>
+        <a onclick="changeColor()">Modo de cor</a>
+        <h1 id="footer-trademark"> Costa Cesar <br> 2024 <span id="symbol">©</span></h1>
+    </footer>
 
-        <script>
-            $(".pop-up").attr('disabled','disabled');
-            
-            load_Carousel();
-            var rainAnimation = new Rain();
-            var fireAnimation = new Fire();
-            
-            rainAnimation.start();
-            
-            function linkClick(id)
-            {
-                let element = document.getElementById(id);
-                let isOpen = element.computedStyleMap().get('height').value >= 300;
-                
-                if(isOpen) window.open(element.getAttribute('href'),'_blank');
+    <script>
+        $(".pop-up").attr('disabled', 'disabled');
+
+        load_Carousel();
+        var rainAnimation = new Rain();
+        var fireAnimation = new Fire();
+
+        rainAnimation.start();
+
+        function linkClick(id) {
+            let element = document.getElementById(id);
+            let isOpen = element.computedStyleMap().get('height').value >= 300;
+
+            if (isOpen) window.open(element.getAttribute('href'), '_blank');
+        }
+        function changeColor() {
+            var page = document.getElementsByClassName("page")[0];
+            page.style.filter = page.style.filter === "saturate(1)" ? "saturate(0)" : "saturate(1)";
+        }
+        async function copyTextToCB(textId) {
+            var copyText = document.getElementById(textId);
+            //copyText.select();
+            //copyText.setSelectionRange(0, 99999); // For mobile devices
+            try {
+                await navigator.clipboard.writeText(copyText.innerText);
+            } catch (error) {
+                console.log(error);
             }
-            function changeColor()
-            {
-                var page = document.getElementsByClassName("page")[0];
-                page.style.filter = page.style.filter === "saturate(1)" ? "saturate(0)" : "saturate(1)";
-            }
-            async function copyTextToCB(textId) 
-            {
-                var copyText = document.getElementById(textId);
-                //copyText.select();
-                //copyText.setSelectionRange(0, 99999); // For mobile devices
-                try {
-                    await navigator.clipboard.writeText(copyText.innerText);
-                } catch (error) {
-                    console.log(error);
-                }
-            }
-            function createMessage(type)
-            {
-                const div_popUp = document.createElement("div");
-                const div_msg = document.createElement("div");
-                const btn_close = document.createElement("button")
+        }
+        function createMessage(type) {
+            const div_popUp = document.createElement("div");
+            const div_msg = document.createElement("div");
+            const btn_close = document.createElement("button")
 
-                div_popUp.className = "pop-up";
-                div_msg.className = "pop-up-message"
-                btn_close.innerText = "Fechar"
-                btn_close.onclick = function() {document.getElementsByClassName("pop-up")[0].remove();}
+            div_popUp.className = "pop-up";
+            div_msg.className = "pop-up-message"
+            btn_close.innerText = "Fechar"
+            btn_close.onclick = function () { document.getElementsByClassName("pop-up")[0].remove(); }
 
-                if(type == "msg-credits")
-                {
-                    const creditsHeader = document.createElement("h2")
-                    const creditsMesage = document.createElement("p")
-                    creditsHeader.innerText = "Esse site foi possível graças a:";
-                    creditsMesage.innerHTML = 'Icones de <a href="https://www.svgrepo.com" target="_blank">SVG Repo</a>'
-                    + '<br>' 
+            if (type == "msg-credits") {
+                const creditsHeader = document.createElement("h2")
+                const creditsMesage = document.createElement("p")
+                creditsHeader.innerText = "Muito grato pelos recursos disponibilizados:";
+                creditsMesage.innerHTML = 'Icones de <a href="https://www.svgrepo.com" target="_blank">SVG Repo</a>'
+                    + '<br>'
                     + 'Faixas de <a href="https://shields.io" target="_blank">Shields.io</a>';
-            
-                    div_msg.appendChild(creditsHeader);
-                    div_msg.appendChild(document.createElement("br"));
-                    div_msg.appendChild(creditsMesage);
-                }
-                
+
+                div_msg.appendChild(creditsHeader);
                 div_msg.appendChild(document.createElement("br"));
-                div_msg.appendChild(document.createElement("br"));
-                div_msg.appendChild(btn_close);
-                div_popUp.appendChild(div_msg);
-                document.body.appendChild(div_popUp);
+                div_msg.appendChild(creditsMesage);
             }
-        </script>
-    </body>
+
+            div_msg.appendChild(document.createElement("br"));
+            div_msg.appendChild(document.createElement("br"));
+            div_msg.appendChild(btn_close);
+            div_popUp.appendChild(div_msg);
+            document.body.appendChild(div_popUp);
+        }
+    </script>
 </html>

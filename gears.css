@@ -1,0 +1,114 @@
+.gears {
+   position: relative;
+   height: 450px;
+   width: 450px;
+   margin-top: 10vh;
+   margin-left: 10vw;
+
+   transform: scale(1.25);
+}
+.gears * {
+   position: absolute;
+}
+
+@media screen and (max-width: 1200px){
+   .gears{
+      margin-top: 0;
+   }
+}
+@media screen and (max-width: 700px){
+   .gears{
+      transform: scale(0);
+   }
+}
+*::before,
+*::after {
+ content: '';
+ position: absolute;
+}
+.rond li,
+.rond::before,
+.rond::after {
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+.rond,
+.rond::after,
+.rond li {
+   background-color: var(--color_text);
+}
+.rond,
+.rond::before,
+.rond::after {
+   border-radius: 50%;
+}
+.rond {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+}
+.rond::before {
+   z-index: 85;
+   height: 75%;
+   width: 75%;
+   background-color: var(--color_panel);
+}
+.rond::after {
+   height: 50%;
+   width: 50%;
+   z-index: 86
+}
+.rond.one {
+   height: 180px;
+   width: 180px;
+   top: 50px;
+   left: 50px;
+   transform: rotate(-18deg);
+   animation: rond1 10s linear infinite forwards;
+}
+.rond.two {
+   height: 130px;
+   width: 130px;
+   top: 210px;
+   left: 180px;
+   transform: rotate(5deg);
+   animation: rond2 10s linear infinite forwards;
+}
+.rond li {
+   height: 120%;
+   width: 37px;
+   border-radius: 3px;
+}
+.rond.two li {
+   width: 25px;
+}
+.rond li:nth-of-type(2) {
+   transform: translate(-50%, -50%) rotate(45deg);
+}
+.rond li:nth-of-type(3) {
+   transform: translate(-50%, -50%) rotate(-45deg);
+}
+.rond li:nth-of-type(4) {
+   transform: translate(-50%, -50%) rotate(90deg);
+}
+
+@keyframes rond1 {
+   from {
+       transform: rotate(-18deg)
+   }
+
+   to {
+       transform: rotate(-378deg)
+   }
+}
+
+@keyframes rond2 {
+   from {
+       transform: rotate(5deg)
+   }
+
+   to {
+       transform: rotate(365deg)
+   }
+}
