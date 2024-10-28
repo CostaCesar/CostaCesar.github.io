@@ -9,8 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="statics.css">
     <link rel="stylesheet" href="dinamics.css">
-    <link rel="stylesheet" href="slides.css">
     <link rel="stylesheet" href="gears.css">
+    <link rel="stylesheet" href="slides.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="carousel.js"></script>
     <script src="animation.js"></script>
@@ -27,7 +27,7 @@
             <h1>Contato</h1>
         </div>
         <div class="header-button inverted" data-btn>
-            <img src="img/icons/person-circle-svgrepo-com.png" alt=" " width="64">
+            <img src="img/icons/person-circle.png" alt=" " width="64">
             <h1>Sobre</h1>
         </div>
         <div class="header-subsection header-button" data-btn>
@@ -42,8 +42,8 @@
             <img src="img/icons/terminal.png" alt=" " width="64">
             <h1>Tecnologias</h1>
         </div>
-        <div class="header-button inverted" data-btn>
-            <img src="img/icons/tools-svgrepo-com.png" alt=" " width="64">
+        <div class="header-button" data-btn>
+            <img src="img/icons/tools.png" alt=" " width="64">
             <h1>Projetos</h1>
         </div>
     </header>
@@ -55,19 +55,19 @@
                     <canvas id="rain">
                         Seu navegador não suporta essa animação
                     </canvas>
-                    <div class="panel intro centered-div">
+                    <div id="intro" class="panel centered-div">
                         <h1> Seja bem vindo </h1>
                         <h2> Conheça mais sobre mim</h2>
                         <br> <br> <br> <br> <br> <br> <br>
                         <h2> Use o menu ao lado para navegar</h2>
                     </div>
                 </div>
-                <div class="slide centered-div" data-carousel-index="contact">
-                    <div id="contact" class="centered-div">
+                <div class="slide" data-carousel-index="contact">
+                    <div id="contact" class="panel centered-div">
                         <h1> Quer entrar em contato?</h1>
-                        <div class="contact-container">
+                        <div class="container">
                             <div class="contact">
-                                <img src="img/icons/linkedin-svgrepo-com.svg" width="100" height="100" viewBox="0 0 24 24">
+                                <img src="img/icons/linkedin.svg" width="100" height="100" viewBox="0 0 24 24">
                                 <h2> Linkedin</h2>
                                 <h3> Caio César Moraes Costa </h3>
                                 <a href="https://www.linkedin.com/in/caio-césar-moraes-costa-4b727b254/" target="_blank">
@@ -95,10 +95,10 @@
                 </div>
                 <div class="slide" data-carousel-index="about">
                     <div id="about" class="panel">
-                        <div class="left-half">
+                        <div class="left-half bottom-one">
                             <img class="left-half" src="img/About1.png">
                         </div>
-                        <div class="right-half centered-div paded-half">
+                        <div class="right-half centered-div paded-half top-one">
                             <span class="centered-div">
                                 <h1> Quem sou eu? </h1>
                                 <h1> Caio Cesar Moraes Costa</h1>
@@ -123,28 +123,30 @@
                                 como <b> Técnico em Deselvovimento de Sistemas </b>.
                             </p>
                         </div>
-                        <div class=" right-half centered-div gears">
-                            <ul class="rond one">
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                            </ul>
-                            <ul class="rond two">
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                            </ul>
+                        <div class="right-half centered-div hide">
+                            <div class="gears">
+                                <ul class="rond one">
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <ul class="rond two">
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div> 
                 <div class="slide" data-carousel-index="cc-ufmg">
                     <div id="grad_gd" class="panel">
-                        <div class="left-half centered-div">
+                        <div class="left-half centered-div bottom-one">
                             <img src="img/icons/processor.png">
                         </div>
-                        <div class="right-half centered-div paded-half">
+                        <div class="right-half centered-div paded-half top-one">
                             <span class="centered-div">
                                 <h1> Ciência da Computação</h1>
                             </span>

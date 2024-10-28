@@ -2,13 +2,24 @@
    position: relative;
    height: 450px;
    width: 450px;
-   margin-top: 15%;
-   margin-left: 12%;
+   margin-top: 10vh;
+   margin-left: 10vw;
 
-   transform: scale(1.5);
+   transform: scale(1.25);
 }
 .gears * {
    position: absolute;
+}
+
+@media screen and (max-width: 1200px){
+   .gears{
+      margin-top: 0;
+   }
+}
+@media screen and (max-width: 700px){
+   .gears{
+      transform: scale(0);
+   }
 }
 *::before,
 *::after {
@@ -44,8 +55,8 @@
    background-color: var(--color_panel);
 }
 .rond::after {
-   height: 55%;
-   width: 55%;
+   height: 50%;
+   width: 50%;
    z-index: 86
 }
 .rond.one {

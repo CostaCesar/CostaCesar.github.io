@@ -1,10 +1,10 @@
 
-.intro{
+#intro{
     height: 100%;
     justify-content: center;
     color: var(--color_alt_text);
 }
-.intro h1, .intro h2
+#intro h1, .intro h2
 {
     text-shadow: 0px 0px 3px var(--color_text);
 }
@@ -13,9 +13,14 @@
     filter: hue-rotate(90deg);
 }
 
-#contact
-{
+#contact{
     width: 100%;
+}
+#contact .container{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
 }
 
 #about > div.left-half{
@@ -46,18 +51,7 @@
     width: 500px
 }
 
-#projects1{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-
-    height: 100%;
-    background-color: var(--color_backg2);
-    color: var(--color_text1); 
-}
-
-#projects2{
+/* #projects2{
     height: 100%;
     display: flex;
     justify-content: center;
@@ -66,34 +60,40 @@
 }
 #projects2 > h1{
     color: var(--color_text2);
-}
-.thumb img{
-    border-radius: 50px;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.project-box:hover .thumb{
-    filter: blur(3px) brightness(50%);
-}
+} */
 
 @media screen and (max-width: 1200px)
 {
-    #about1 > .left-half{
-        width: 0;
-        height: 0;
+    #intro{
+        height: 50%;
     }
 }
-@media screen and (max-width: 900px){
-    #projects1 
-    {
-        padding-top: 150px;
-        padding-bottom: 200px;
+@media screen and (max-width: 1200px) and (min-width: 700px)
+{
+    #grad_em .top-one{
+        bottom: 0;
     }
 }
 @media screen and (max-width: 600px)
 {
-    #projects1 p > img{
-        height: 25px;
+    #grad_em .top-one{
+        margin-top: 80px;
+    }
+}
+@media screen and (max-height: 620px){
+    #contact h1{
+        padding: 0;
+    }
+    
+    #programing{
+        position: relative;
+        top: -50px;
+        transform: scale(0.80);
+    }
+    #programing h1{
+        padding-top: 5px;
+    }
+    #programing p{
+        width: 100vw;
     }
 }
