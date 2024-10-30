@@ -49,6 +49,7 @@ header {
     border-right: 2px solid;
     border-color: var(--color_text);
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 header::-webkit-scrollbar {
     width: 0px;
