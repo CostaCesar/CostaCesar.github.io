@@ -283,8 +283,13 @@
         rainAnimation.start();
 
         function linkClick(id) {
+            let height_limit = 0;
+            if(screen.orientation.type =="landscape-primary" || screen.orientation.type == "landscape-secondary")
+                height_limit = 240;
+            else height_limit = 300;
+
             let element = document.getElementById(id);
-            let isOpen = element.computedStyleMap().get('height').value >= 300;
+            let isOpen = element.computedStyleMap().get('height').value >= height_limit;
 
             if (isOpen) window.open(element.getAttribute('href'), '_blank');
         }
