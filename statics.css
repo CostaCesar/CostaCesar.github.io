@@ -35,15 +35,15 @@ body{
 }
 
 header {
-    z-index: 10;
+    z-index: 9;
     display: flex;
     align-items: start;
     flex-direction: column;
 
     position: fixed;
-    background-color: var(--color_header);
+    background-color: transparent;
     width: 11%;
-    height: 100%;
+    height: 400px;
     top: 0;
 
     border-right: 2px solid;
@@ -67,14 +67,7 @@ header::-webkit-scrollbar {
     transition: all;
     transition-duration: var(--transit_duration);
 }
-.header-title
-{
-    width: 100%;
-    font-size: 16px;
-    text-align: center;
-}
-.header-subsection
-{
+.header-subsection{
     margin-left: 20px;
 }
 .header-button h1{
@@ -104,7 +97,6 @@ header::-webkit-scrollbar {
     text-shadow: 0px 0px 10px var(--color_text);
     cursor: pointer;
 }
-
 header hr{
     width: 100%;
     border-top: 2px solid var(--color_text);
@@ -132,14 +124,13 @@ footer {
     justify-content: space-evenly;
     flex-direction: column;
     
-    padding-top: 100px;
+    padding-top: 0px;
     height: 200px;
     background-color: var(--color_footer);
-    background: linear-gradient(white 0%, black 40%);
+    background: linear-gradient(transparent, black 5%);
     width: 11%;
     bottom: 0;
 }
-
 footer a, #footer-trademark {
     text-align: center;
     font-size: 20px;
@@ -148,19 +139,17 @@ footer a, #footer-trademark {
     transition-duration: var(--transit_duration);
     color: var(--color_alt_text);
     text-decoration: none;
+    padding: 0 10px 0 10px;
 }
 footer a:hover{
     color: var(--color_alt_text);
     transform: scale(1.1);
 }
-#footer-trademark{
+#symbol{
+    font-size: 36px;
     font-weight: lighter;
-    font-size: 16px;
 }
-#symbol
-{
-    font-size: 26px
-}
+
 .pop-up-message{
     position: relative;
     top: 5%;
@@ -193,4 +182,63 @@ footer a:hover{
 {
     transform: scale(1.1);
     background-color: var(--color_panel);
+}
+
+@media screen and (max-width: 1200px) {
+    .header-button h1{
+        font-size: 75%;
+    }
+    .header-subsection{
+        margin-left: 10px;
+    }
+    .header-button img{
+        height: 28px;
+        width: 28px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .header-button h1{
+        font-size: 75%;
+    }
+    .header-subsection{
+        margin-left: 5px;
+    }
+    .header-button img{
+        height: 20px;
+        width: 20px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .header-button{
+        flex-direction: column;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .header-subsection{
+        margin-left: 0px;
+    }
+    .header-button h1{
+        font-size: 0px;
+    }
+    .header-button img{
+        width: 45%;
+        height: auto;
+        margin-left: 0px;
+    }
+    footer{
+        height: 140px;
+    }
+    footer a{
+        padding: 0 5px 0 5px;
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .header-button img{
+        margin-left: 2px;
+        width: 80%;
+    }
+    footer a{
+        font-size: 0;
+    }
 }

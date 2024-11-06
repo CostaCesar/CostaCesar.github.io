@@ -270,7 +270,6 @@
             Código-Fonte
         </a>
         <a onclick="changeColor()">Modo de cor</a>
-        <h1 id="footer-trademark"> Costa Cesar <br> 2024 <span id="symbol">©</span></h1>
     </footer>
 
     <script>
@@ -324,10 +323,13 @@
                 creditsMesage.innerHTML = 'Icones de <a href="https://www.svgrepo.com" target="_blank">SVG Repo</a>'
                     + '<br>'
                     + 'Faixas de <a href="https://shields.io" target="_blank">Shields.io</a>';
-
+                const creditsMark = document.createElement("h2");
+                creditsMark.innerHTML = 'Costa Cesar 2024 <span id="symbol">©</span>';
                 div_msg.appendChild(creditsHeader);
-                div_msg.appendChild(document.createElement("br"));
                 div_msg.appendChild(creditsMesage);
+                div_msg.appendChild(document.createElement("br"));
+                div_msg.appendChild(document.createElement("br"));
+                div_msg.appendChild(creditsMark);
             }
 
             div_msg.appendChild(document.createElement("br"));
