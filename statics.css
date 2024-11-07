@@ -107,6 +107,7 @@ header hr{
     left: 11%;
     width: 89%;
     height: 100vh;
+    min-height: 500px;
 }
 .page > div h1{
     font-size: 50px;
@@ -223,14 +224,19 @@ footer a:hover{
         height: auto;
         margin-left: 0px;
     }
+
     footer a{
         padding: 0 5px 0 5px;
         font-size: 14px;
     }
+
+    .page > div h1{
+        font-size: 40px;
+    }
 }
 @media screen and (max-width: 700px) {
     .page{
-        height: 1000px;
+        min-height: 1000px;
         border-left: 2px solid;
         border-color: var(--color_text);
     }
