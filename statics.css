@@ -130,6 +130,9 @@ footer {
     background: linear-gradient(transparent, black 5%);
     width: 11%;
     bottom: 0;
+
+    border-right: 2px solid;
+    border-color: var(--color_text);
 }
 footer a, #footer-trademark {
     text-align: center;
