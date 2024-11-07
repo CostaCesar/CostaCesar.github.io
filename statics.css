@@ -40,10 +40,10 @@ header {
     align-items: start;
     flex-direction: column;
 
-    position: fixed;
+    position: absolute;
     background-color: transparent;
     width: 11%;
-    height: 400px;
+    height: 72vh;
     top: 0;
 
     border-right: 2px solid;
@@ -125,7 +125,7 @@ footer {
     flex-direction: column;
     
     padding-top: 0px;
-    height: 200px;
+    height: 30vh;
     background-color: var(--color_footer);
     background: linear-gradient(transparent, black 5%);
     width: 11%;
@@ -224,9 +224,6 @@ footer a:hover{
         width: 45%;
         height: auto;
         margin-left: 0px;
-    }
-    footer{
-        height: 140px;
     }
     footer a{
         padding: 0 5px 0 5px;
