@@ -140,7 +140,7 @@ canvas
     justify-content: space-around;
     align-items: center;
 }
-.three-box-div > .project-box{
+.three-box-div > .project{
     position: relative;
     width: 20%;
     min-width: 350px;
@@ -202,11 +202,11 @@ canvas
     color: var(--color_text);
     text-shadow: 0px 0px 10px var(--color_alt_text);
 }
-.project-box:hover .detail{
+.project:hover .detail{
     filter: opacity(100%);
     cursor: pointer;
 }
-.project-box:hover .thumb h2{
+.project:hover .thumb h2{
     filter: opacity(0%);
 }
 
@@ -228,12 +228,6 @@ canvas
     100% {filter: opacity(1);}
 }
 
-.contact-container{
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-around;
-}
 .contact{
     /* box-shadow: rgba(0, 0, 0, 1) 0px 22px 70px 4px; */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.21);
@@ -281,6 +275,6 @@ canvas
     height: 100%;
     object-fit: cover;
 }
-.project-box:hover .thumb{
+.project:hover .thumb{
     filter: blur(3px) brightness(50%);
 }

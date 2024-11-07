@@ -40,14 +40,12 @@ header {
     align-items: start;
     flex-direction: column;
 
-    position: absolute;
+    position: fixed;
     background-color: transparent;
     width: 11%;
-    height: 72vh;
+    height: 62vh;
     top: 0;
 
-    border-right: 2px solid;
-    border-color: var(--color_text);
     overflow-y: scroll;
     overflow-x: hidden;
 }
@@ -125,14 +123,11 @@ footer {
     flex-direction: column;
     
     padding-top: 0px;
-    height: 30vh;
+    height: 40vh;
     background-color: var(--color_footer);
     background: linear-gradient(transparent, black 5%);
     width: 11%;
     bottom: 0;
-
-    border-right: 2px solid;
-    border-color: var(--color_text);
 }
 footer a, #footer-trademark {
     text-align: center;
@@ -231,6 +226,13 @@ footer a:hover{
     footer a{
         padding: 0 5px 0 5px;
         font-size: 14px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .page{
+        height: 1000px;
+        border-left: 2px solid;
+        border-color: var(--color_text);
     }
 }
 @media screen and (max-width: 600px) {
