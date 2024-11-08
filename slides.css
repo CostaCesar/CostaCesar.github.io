@@ -101,6 +101,9 @@
         min-width: initial;
     }
     
+    #about{
+        flex-direction: column-reverse;
+    }
     #about > div.left-half img{
         width: 380px
     }
