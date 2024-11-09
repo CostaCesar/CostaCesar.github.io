@@ -35,7 +35,7 @@
     justify-content: center;
 }
 #about > div.left-half img{
-    width: 560px
+    width: 90%
 }
 
 #grad_em > .left-half > *{
@@ -53,19 +53,15 @@
     text-align: justify;
     padding: 0% 3.5%;
 }
-#grad_gd > .left-half > img{
-    width: 500px
+#grad_gd > div.left-half > img{
+    width: 80%
 }
 
 @media screen and (max-width: 1300px) {
-    #about > div.left-half img{
-        width: 480px
-    }
+
 }
 @media screen and (max-width: 1100px) {
-    #about > div.left-half img{
-        width: 400px
-    }
+
 }
 @media screen and (max-width: 900px) {
     #contact .contact h2, #contact .contact h3 {
@@ -75,9 +71,6 @@
         min-width: 50px;
     }
 
-    #about > div.left-half img{
-        width: 310px
-    }
     #about > div.right-half li{
         font-size: 18px;
     }
@@ -101,15 +94,23 @@
         min-width: initial;
     }
     
-    #about{
+    #about, #grad_gd{
         flex-direction: column-reverse;
     }
-    #about > div.left-half img{
-        width: 380px
-    }
-    #about .paded-half, #grad_em .paded-half{
+    #about .paded-half, #grad_em .paded-half, #grad_gd .paded-half{
         padding: 0;
         width: 98%;
+    }
+
+    #grad_em > div.top-one{
+        margin-top: 50px;
+    }
+    #grad_em > div.top-one > p{
+        margin-top: 50px;
+    }
+    
+    #grad_gd > div.left-half > img{
+        width: 60%;
     }
 }
 @media screen and (max-width: 400px) {
@@ -120,7 +121,10 @@
         font-size: 1.1em;
     }
     
-    #about > div.left-half img{
-        width: 280px
+    #grad_em > div.top-one{
+        margin-top: 30px;
+    }
+    #grad_em > div.top-one > p{
+        margin-top: 40px;
     }
 }

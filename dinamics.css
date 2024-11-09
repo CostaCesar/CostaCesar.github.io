@@ -100,6 +100,9 @@
     position: relative;
     right: 0;
 }
+.top-one{
+    min-height: 280px;
+}
 
 .three-col{
     width: 100%;
@@ -289,5 +292,8 @@ canvas
 
     div.right-half li, div.left-half li, div.right-half p, div.left-half p{
         font-size: 20px;
+    }
+    div.left-half img{
+        margin-top: 0px;
     }
 }
