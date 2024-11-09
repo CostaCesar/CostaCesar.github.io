@@ -102,13 +102,6 @@
         width: 98%;
     }
 
-    #grad_em > div.top-one{
-        margin-top: 50px;
-    }
-    #grad_em > div.top-one > p{
-        margin-top: 50px;
-    }
-    
     #grad_gd > div.left-half > img{
         width: 60%;
     }
@@ -120,11 +113,5 @@
     #contact .contact h2, #contact .contact h3 {
         font-size: 1.1em;
     }
-    
-    #grad_em > div.top-one{
-        margin-top: 30px;
-    }
-    #grad_em > div.top-one > p{
-        margin-top: 40px;
-    }
+
 }
