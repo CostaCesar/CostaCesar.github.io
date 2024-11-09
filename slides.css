@@ -56,6 +56,9 @@
 #grad_gd > div.left-half > img{
     width: 80%
 }
+#skills p > img{
+    width: fit-content;
+}
 
 @media screen and (max-width: 1300px) {
 
@@ -114,4 +117,7 @@
         font-size: 1.1em;
     }
 
+    #skills > div.centered-div > p{
+        font-size: 22px;
+    }
 }
