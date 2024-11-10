@@ -108,6 +108,9 @@ header hr{
     width: 89%;
     height: 100vh;
     min-height: 500px;
+
+    border-left: 2px solid;
+    border-color: var(--color_text);
 }
 .page > div h1{
     font-size: 50px;
@@ -234,11 +237,9 @@ footer a:hover{
         font-size: 40px;
     }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 700px), (max-height: 600px) {
     .page{
-        min-height: 1000px;
-        border-left: 2px solid;
-        border-color: var(--color_text);
+        min-height: 900px;
     }
 }
 @media screen and (max-width: 600px) {

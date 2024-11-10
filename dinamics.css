@@ -6,12 +6,6 @@
     z-index: 1;
     background-color: var(--color_panel);
 }
-.carousel-button .chevron
-{
-    animation-name: blink;
-    animation-duration: 3000ms;
-    animation-iteration-count: infinite;
-}
 .carousel-button{
     /* vertically centering the buttons */
     position: absolute;
@@ -34,24 +28,6 @@
     filter: invert(1);
     transition: filter 0.5s;
 }
-@keyframes blink
-{
-    0% {filter: invert(1) brightness(90%);}
-    50% {filter: invert(1) brightness(10%);}
-    100% {filter: invert(1) brightness(90%);}
-}
-
-/* .carousel-button:hover
-{
-    filter: invert(1) drop-shadow(0px 0px 8px rgba(255,255,255,255));
-}
-.carousel-button.next {
-    /* The "next slide button" will be at the right * /
-    right: 0;
-}
-.carousel-button.previous{
-    transform: scaleX(-1) translateY(-50%);
-} */
 
 .carousel-slides {
     display: flex;
@@ -73,6 +49,9 @@
     display: flex;
     width: 100%;
     min-height: 100vh;
+}
+.full-panel{
+    height: 100%;
 }
 
 .paded-half
@@ -142,76 +121,6 @@ canvas
     justify-content: space-around;
     align-items: center;
 }
-.three-box-div > .project{
-    position: relative;
-    width: 20%;
-    min-width: 350px;
-    max-width: 500px;
-    height: 450px;
-    border-radius: 50px;
-}
-.thumb{
-    position: relative;
-    display: flex;
-    width: 100%;
-    height: inherit;
-    filter: blur(0px) brightness(100%);
-    transition: filter 1s;
-}
-.thumb h2{
-    text-align: center;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    font-size: 40px;
-    color: var(--color_alt_text);
-    text-shadow: 3px 3px 15px black, -3px -3px 15px black, -3px 3px 15px black, 3px -3px 15px black ;
-    transform: translateY(30%);
-    transition: all 1s;
-}
-.detail{
-    position: absolute;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    color: var(--color_alt_text);
-    z-index: 1;
-    filter: opacity(0%);
-    transition: filter 1s;
-    text-align: center;
-    width: 96%;
-    height: 100%;
-    padding: 0 2% 0 2%;
-}
-.detail > h2{
-    font-weight: normal;
-    font-size: 40px;
-}
-.detail > h3{
-    font-weight: normal;
-    font-size: 25px;
-}
-.detail > h4{
-    font-weight: bold;
-    font-size: 25px;
-    transition: 0.5s;
-    color: var(--color_alt_text);
-}
-.detail > h4:hover{
-    font-weight: bold;
-    color: var(--color_text);
-    text-shadow: 0px 0px 10px var(--color_alt_text);
-}
-.project:hover .detail{
-    filter: opacity(100%);
-    cursor: pointer;
-}
-.project:hover .thumb h2{
-    filter: opacity(0%);
-}
-
 .pop-up{
     position: fixed;
     top: 0;
@@ -239,7 +148,6 @@ canvas
     min-width: 200px;
     max-width: 300px;
 }
-
 .call-button
 {
     height: 40px;
@@ -271,11 +179,83 @@ canvas
     text-shadow: 0px 0px 16px rgba(255,255,255,0.75);
 }
 
+.project{
+    position: relative;
+    width: 20%;
+    min-width: 310px;
+    max-width: 500px;
+    height: 450px;
+    border-radius: 50px;
+}
+.thumb{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: inherit;
+    filter: blur(0px) brightness(100%);
+    transition: filter 1s;
+}
+.thumb h2{
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 40px;
+    color: var(--color_alt_text);
+    text-shadow: 3px 3px 15px black, -3px -3px 15px black, -3px 3px 15px black, 3px -3px 15px black ;
+    transform: translateY(30%);
+    transition: all 1s;
+}
 .thumb img{
     border-radius: 50px;
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+.detail{
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color: var(--color_alt_text);
+    z-index: 1;
+    filter: opacity(0%);
+    transition: filter 1s;
+    text-align: center;
+    width: 96%;
+    height: 100%;
+    padding: 0 2% 0 2%;
+}
+.detail > h2{
+    font-weight: normal;
+    font-size: 32px;
+    text-shadow: 0px 0px 10px var(--color_text);
+}
+.detail > h3{
+    font-weight: normal;
+    font-size: 24px;
+    text-shadow: 0px 0px 10px var(--color_text);
+}
+.detail > h4{
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.5s;
+    color: var(--color_alt_text);
+    text-shadow: 0px 0px 10px var(--color_text);
+}
+.detail > h4:hover{
+    font-weight: bold;
+    color: var(--color_text);
+    text-shadow: 0px 0px 5px var(--color_alt_text);
+}
+.project:hover .detail{
+    filter: opacity(100%);
+    cursor: pointer;
+}
+.project:hover .thumb h2{
+    filter: opacity(0%);
 }
 .project:hover .thumb{
     filter: blur(3px) brightness(50%);

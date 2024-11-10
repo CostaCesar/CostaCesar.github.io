@@ -207,19 +207,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="slide" data-carousel-index="geo-wave" data-animation="fire">
-                    <div id="project-geo-wave" class="panel">
+                <div class="slide" data-carousel-index="projects" data-animation="fire">
+                    <div id="projects" class="panel full-panel">
                         <canvas id="fire" width="160" height="200">
                             Seu navegador não suporta essa animação
                         </canvas>
-                        <span class="canvas-container">
-                        </span>
                         <div class="three-box-div">
-                            <span id="projects2-geowav" class="project-box"
+                            <span id="project-geowav" class="project"
                                 href="https://github.com/EduardoBirchal/Geometry-Wave?tab=readme-ov-file"
                                 target="_blank" onclick="linkClick(this.attributes.id.value)">
                                 <div class="thumb">
-                                    <img src="img/projects/geoWave.png" alt="">
+                                    <img src="img/projects/geoWave.png" alt="Geometry Wave">
                                     <h2>Geometry Wave</h2>
                                 </div>
                                 <span class="detail">
@@ -229,11 +227,11 @@
                                     <h4> Clique para ver mais </h4>
                                 </span>
                             </span>
-                            <span id="projects2-6502" class="project-box"
+                            <span id="project-6502" class="project"
                                 href="https://github.com/CostaCesar/6502-Emulator"
                                 target="_blank" onclick="linkClick(this.attributes.id.value)">
                                 <div class="thumb">
-                                    <img src="img/projects/6502.png" alt="">
+                                    <img src="img/projects/6502.png" alt="Emulador 6502">
                                     <h2>Emulador 6502</h2>
                                 </div>
                                 <span class="detail">
@@ -243,16 +241,16 @@
                                     <h4> Clique para ver mais </h4> 
                                 </span>
                             </span>
-                            <span id="projects2-ttw" class="project-box"
+                            <span id="project-ttw" class="project"
                                 href="https://github.com/CostaCesar/TerminalWar"
                                 target="_blank" onclick="linkClick(this.attributes.id.value)">
                                 <div class="thumb">
-                                    <img src="img/projects/ttw.png" alt="">
+                                    <img src="img/projects/ttw.png" alt="Total Terminal War">
                                     <h2>Total Terminal War</h2>
                                 </div>
                                 <span class="detail">
                                     <h2>Total Terminal War</h2>
-                                    <h3> Jogo de estratégia em turnos para o terminal do Windows, incluindo áudio, IA e conteúdo gerado pelo jogador</h3>
+                                    <h3> Jogo de estratégia para o terminal, incluindo áudio, IA e muito mais</h3>
                                     <h3> Atualmente, estou migrando e aprimorado para C++</h3>
                                     <h4> Clique para ver mais </h4>
                                 </span>
@@ -282,15 +280,17 @@
         rainAnimation.start();
 
         function linkClick(id) {
-            let height_limit = 0;
-            if(screen.orientation.type =="landscape-primary" || screen.orientation.type == "landscape-secondary")
-                height_limit = 240;
-            else height_limit = 300;
+            
+            let current = document.getElementById(id);
 
-            let element = document.getElementById(id);
-            let isOpen = element.computedStyleMap().get('height').value >= height_limit;
+            if(current.getAttribute("selected") == "true")
+                window.open(current.getAttribute('href'), '_blank'); 
 
-            if (isOpen) window.open(element.getAttribute('href'), '_blank');
+            document.querySelectorAll('.project').forEach(project => {
+                project.setAttribute("selected", "false")
+            });
+            
+            current.setAttribute("selected", "true");
         }
         function changeColor() {
             var page = document.getElementsByClassName("page")[0];
