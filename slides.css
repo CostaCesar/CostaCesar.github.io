@@ -121,6 +121,10 @@
         padding: 0;
         width: 98%;
     }
+    #about > div.left-half > img{
+        padding-top: 50px;
+        width: 80%;
+    }
 
     #grad_gd > div.left-half > img{
         width: 60%;
