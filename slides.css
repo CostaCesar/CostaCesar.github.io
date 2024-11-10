@@ -155,6 +155,10 @@
 }
 
 @media screen and (max-height: 600px) {
+    #intro{
+        height: 0;
+    }
+
     #projects > .three-box-div .project{
         margin-top: 25px;
     }
