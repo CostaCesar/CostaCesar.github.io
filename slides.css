@@ -16,6 +16,12 @@
 #contact{
     width: 100%;
 }
+#contact > h1{
+    padding: 0 10px 0 10px;
+}
+#contact .three-box-div{
+    height: auto;
+}
 #contact .container{
     display: flex;
     width: 100%;
@@ -29,7 +35,8 @@
     justify-content: center;
 }
 #about > div.left-half img{
-    width: 600px
+    width: 90%;
+    height: min-content;
 }
 
 #grad_em > .left-half > *{
@@ -47,53 +54,117 @@
     text-align: justify;
     padding: 0% 3.5%;
 }
-#grad_gd > .left-half > img{
-    width: 500px
+#grad_gd > div.left-half > img{
+    width: 80%
 }
 
-/* #projects2{
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
+#skills p > img{
+    width: fit-content;
 }
-#projects2 > h1{
-    color: var(--color_text2);
-} */
 
-@media screen and (max-width: 1200px)
-{
+#projects.full-panel{
+    height: 0;
+}
+@media screen and (max-width: 1300px) {
+
+}
+@media screen and (max-width: 1100px) {
+    #projects > .three-box-div{
+        flex-direction: column;
+        height: 100%;
+    }
+    #projects > .three-box-div .project{
+        width: 100%;
+        max-width: 90%;
+        height: 100px;
+        transition: all 0.5s;
+    }
+    #projects > .three-box-div .project:hover{
+        height: 360px;
+    }
+}
+@media screen and (max-width: 900px) {
+    #contact .contact h2, #contact .contact h3 {
+        font-size: 0.90em;
+    }
+    #contact .contact .call-button{
+        min-width: 50px;
+    }
+
+    #about > div.right-half li{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 700px) {
     #intro{
-        height: 50%;
-    }
-}
-@media screen and (max-width: 1200px) and (min-width: 700px)
-{
-    #grad_em .top-one{
-        bottom: 0;
-    }
-}
-@media screen and (max-width: 600px)
-{
-    #grad_em .top-one{
-        margin-top: 80px;
-    }
-}
-@media screen and (max-height: 620px){
-    #contact h1{
-        padding: 0;
+        height: 320px;
     }
     
-    #programing{
-        position: relative;
-        top: -50px;
-        transform: scale(0.80);
+    #contact h1{
+        margin-top: 25px;
+        margin-bottom: 50px;
     }
-    #programing h1{
-        padding-top: 5px;
+    #contact .three-box-div{
+        flex-direction: column;
     }
-    #programing p{
-        width: 100vw;
+    #contact .contact h2, #contact .contact h3 {
+        font-size: 1.5em;
+    }
+    #contact .contact .call-button{
+        min-width: initial;
+    }
+    
+    #about, #grad_gd{
+        flex-direction: column-reverse;
+    }
+    #about .paded-half, #grad_em .paded-half, #grad_gd .paded-half{
+        padding: 0;
+        width: 98%;
+    }
+    #about > div.left-half > img{
+        padding-top: 50px;
+        width: 80%;
+    }
+
+    #grad_gd > div.left-half > img{
+        width: 60%;
+    }
+
+    #projects > .three-box-div .project > .thumb h2{
+        font-size: 34px;
+    }
+}
+@media screen and (max-width: 400px) {
+    #contact h1{
+        font-size: 40px
+    }
+    #contact .contact h2, #contact .contact h3 {
+        font-size: 1.1em;
+    }
+    
+    #skills > div.centered-div > p{
+        font-size: 22px;
+    }
+    
+    #projects > .three-box-div .project > .thumb h2{
+        font-size: 30px;
+    }
+    #projects > .three-box-div .project{
+        transform: scale(0.8);
+    }
+}
+
+@media screen and (max-height: 600px) {
+    #intro{
+        height: 0;
+    }
+
+    #projects > .three-box-div .project{
+        margin-top: 25px;
+    }
+}
+@media screen and (max-height: 500px) {
+    #projects.full-panel{
+        height: 60%;
     }
 }
