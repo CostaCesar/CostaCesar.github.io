@@ -1,12 +1,7 @@
-function modulo(number, mod)
-{
-    let result = number % mod;
-    if (result < 0) {
-        result += mod;
-    }
-    return result;
-}
+var g_carrousel;
 
+let g_touch_start_X = 0
+let g_touch_end_X = 0
 class Slide
 {
     constructor(index, animation)
@@ -35,6 +30,7 @@ class Carousel
         this.slidesContainer = carousel.querySelector('[data-carousel-slides]');
         this.buttons = buttons;
         this.slides = {};
+        this.currentSlide = 0;
 
         // state
         for(let i = 0; i < this.slidesContainer.children.length; i++)
@@ -77,11 +73,47 @@ class Carousel
         }
 
     }
+
+    GoNext() 
+    {
+        let new_slide = Math.min(this.currentSlide+1, this.numSlides-1);
+        this.gotoSlide(new_slide);
+    }
+    
+    GoPrevious() 
+    {
+        let new_slide = Math.max(this.currentSlide-1, 0);
+        this.gotoSlide(new_slide);
+    }
+}
+
+function checkDirection() {
+    const k_touch_tolerance = 50;
+
+    if (g_touch_end_X + k_touch_tolerance < g_touch_start_X )
+    {
+        // Left Swap
+        g_carrousel.GoNext();
+    }
+    if (g_touch_end_X > g_touch_start_X  + k_touch_tolerance)
+    {
+        // Right Swap
+        g_carrousel.GoPrevious();
+    }
 }
 
 function load_Carousel()
 {
     buttons = document.querySelectorAll('[data-btn]');
-    const carousels = document.querySelectorAll('[data-carousel]');
-    carousels.forEach(carousel => new Carousel(carousel, buttons));
+    const carousel = document.querySelector('[data-carousel]');
+    g_carrousel = new Carousel(carousel, buttons);
+
+    document.addEventListener('touchstart', e => {
+        g_touch_start_X  = e.changedTouches[0].screenX
+    })
+    document.addEventListener('touchend', e => {
+        g_touch_end_X = e.changedTouches[0].screenX
+        checkDirection()
+    })
 }
+
